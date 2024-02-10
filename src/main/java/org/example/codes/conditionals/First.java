@@ -1,4 +1,4 @@
-package org.guide.Chapter6;
+package org.example.codes.conditionals;
 
 public class First {
 	public static int max(int a,int b){

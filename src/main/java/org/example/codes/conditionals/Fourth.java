@@ -1,4 +1,4 @@
-package org.guide.Chapter6;
+package org.example.codes.conditionals;
 import java.util.Scanner;
 
 //hex2dec

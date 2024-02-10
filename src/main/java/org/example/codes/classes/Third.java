@@ -1,4 +1,4 @@
-package org.guide.Chapter5;
+package org.example.codes.classes;
 //nested loops it takes 277hours
 public class Third {
 	public static void main(String[] args) {

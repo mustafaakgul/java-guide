@@ -1,4 +1,4 @@
-package org.guide.Chapter5;
+package org.example.codes.classes;
 
 public class Fourth {
 	public static void main(String[] args) {

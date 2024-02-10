@@ -1,4 +1,4 @@
-package org.guide.Chapter5;
+package org.example.codes.classes;
 //The first 50 primes numbers
 public class Fifth {
 	public static void main(String[] args) {

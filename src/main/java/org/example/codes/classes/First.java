@@ -1,4 +1,4 @@
-package org.guide.Chapter5;
+package org.example.codes.classes;
 
 import java.util.Scanner;
 //This program can develop i think great idea

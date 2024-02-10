@@ -1,4 +1,4 @@
-package org.guide.Chapter5;
+package org.example.codes.classes;
 
 import java.util.Scanner;
 //do while loop test

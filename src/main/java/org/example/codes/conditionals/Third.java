@@ -1,4 +1,4 @@
-package org.guide.Chapter6;
+package org.example.codes.conditionals;
 //prime number method
 public class Third {
 	public static void main(String[] args) {
