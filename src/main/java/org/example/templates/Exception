@@ -1,0 +1,408 @@
+-----------------Exception handling
+//Sıfıra bölme hatası
+import java.util.*;
+public class Aritmetik1 {
+  public static void main(String[] args) {
+	    Scanner input = new Scanner(System.in);
+	    boolean continueInput = true;
+
+	    do {
+	      try {
+	        System.out.print("Enter an integer: ");
+	        int number = input.nextInt();
+
+	        // Display the result
+	        System.out.println(
+	          "The number entered is " + number);
+
+	        continueInput = false;
+	      }
+	      catch (InputMismatchException ex) {
+	        System.out.println("Try again. (" +
+	          "Incorrect input: an integer is required)");
+	        input.nextLine(); // discard input
+	      }
+	    } while (continueInput);
+	  }
+	}
+
+-------------- ornek 2
+//Sıfıra bölme hatası
+import java.util.Scanner;
+
+public class Aritmetik2 {
+
+  public static int quotient(int number1, int number2) {
+    if (number2 == 0)
+      throw new ArithmeticException("Divisor cannot be zero");
+
+    return number1 / number2;
+  }
+
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    // Prompt the user to enter two integers
+    System.out.print("Enter two integers: ");
+    int number1 = input.nextInt();
+    int number2 = input.nextInt();
+
+    try {
+      int result = quotient(number1, number2);
+      System.out.println(number1 + " / " + number2 + " is "
+        + result);
+    }
+    catch (ArithmeticException ex) {
+      System.out.println("Exception: an integer " +
+        "cannot be divided by zero ");
+    }
+
+    System.out.println("Execution continues ...");
+  }
+}
+
+-------
+Exceptions: İstisna durumların ele alınması
+
+Bir programda çalışma anında bir istisnai durum oluşursa program anormal şekilde sonlanır. Programın çalışmaya devam edebilmesi ya da daha düzgün bir şekilde sonlanması için böyle durumları nasıl idare edebiliriz? try, catch ve finally. try: yapılması istenen istisna oluşturabilecek işlem. catch : bu durumda yapılacaklar, finally: her zaman yapılacaklar
+
+1-------------------Bölme (sıfıra bölmeyi dikkate almadan)
+import java.util.Scanner;
+public class Exception1 {
+
+	  public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+
+	    System.out.print("İki sayı giriniz: ");
+	    int a = s.nextInt();
+	    int b = s.nextInt();
+
+	    System.out.println(a + " / " + b + " = " + (a / b));
+	  }
+	}
+2 --------------------------if ile kontrol edilen sıfıra bölme
+import java.util.Scanner;
+public class Exception2 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		System.out.print("İki sayı giriniz: ");
+		int a = s.nextInt();
+		int b = s.nextInt();
+
+		if (b != 0)
+			System.out.println(a + " / " + b + " = " +(a / b));
+		else
+			System.out.println("Bölen sıfır olamaz ");
+	}
+}
+----------------------Exception ile sıfıra bölme
+import java.util.Scanner;
+public class Exception3 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		System.out.print("İki sayı giriniz: ");
+		int a = s.nextInt();
+		int b = s.nextInt();
+
+		try {
+			if (b == 0)
+				throw new ArithmeticException("Bölen sıfır olamaz");
+
+			System.out.println(a + " / " + b + " = " +(a / b));
+		}
+		catch (Exception ex) {
+			System.out.println("Exception: bir sayı sıfıra bölünemez");
+		}
+		System.out.println("Çalışma devam ediyor ...");
+	}
+}
+3----------------------Exception ile sıfıra bölme
+import java.util.Scanner;
+public class Exception4 {
+
+	public static int bolme(int n1, int n2) {
+		if (n2 == 0)
+			throw new ArithmeticException("Bölen sıfır olamaz..");
+
+		return n1 / n2;
+	}
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		System.out.print("İki sayı giriniz: ");
+		int a = s.nextInt();
+		int b = s.nextInt();
+
+		try {
+			int sonuc = bolme(a, b);
+			System.out.println(a + " / " + b + " = " + sonuc);
+		}
+		catch (Exception ex) {
+			System.out.println("Exception: Bir sayı sıfıra bölünemez.. ");
+		}
+
+		System.out.println("Program burada son buluyor ...");
+	}
+}
+4----------------------Exception ile sıfıra bölme
+import java.util.Scanner;
+public class Exception5 {
+  public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+
+	    System.out.print("İki sayı giriniz: ");
+	    int a = s.nextInt();
+	    int b = s.nextInt();
+
+	    try {
+	      if (b == 0)
+	        throw new ArithmeticException("Payda sıfır olamaz  ");
+
+	      System.out.println(a + " / " + b + " = " +  (a / b));
+	    }
+	    catch (Exception ex) {
+		  System.out.println(ex.getMessage());
+	    }
+
+	    System.out.println("Burada bitiyor ...");
+	  }
+	}
+
+5----------------------Exception ile bölme
+ import java.util.Scanner;
+
+ public class BolmeException {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+
+    System.out.print("İki sayı giriniz: ");
+    int sayi1 = s.nextInt();
+    int sayi2 = s.nextInt();
+
+    try {
+      if (sayi2 == 0)
+        throw new ArithmeticException("Bölen sıfır olamaz.  ");
+
+      System.out.println(sayi1 + " / " + sayi2 + " = " +  (sayi1 / sayi2));
+    }
+    catch (Exception ex) {
+	System.out.println(ex.getMessage());
+    }
+
+    System.out.println("Çalışıyor ...");
+  }
+}
+6--------------- Exception ile sıfıra bölme
+import java.util.Scanner;
+public class Exception4 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.print("İki sayı giriniz: ");
+		try {
+			int a = s.nextInt();
+			int b = s.nextInt();
+     		int sonuc = a/b;
+			System.out.println(a + " / " + b + " = " + sonuc);
+		}
+		catch (ArithmeticException ex) {
+			System.out.println(ex.getMessage()+"  Exception: Bir sayı sıfıra bölünemez.. ");
+		}
+		catch (Exception ex) {
+			System.out.println(ex.getMessage()+"  Diğer ");
+		}
+
+		System.out.println("Program burada son buluyor ...");
+	}
+}
+
+
+7--------------- Exception ile örnek işlem
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.event.*;
+public class Exception6  extends JFrame{
+	private JTextField sayi1=new JTextField (10);
+	private JTextField  sayi2=new JTextField (10);
+	private JRadioButton r1=new JRadioButton("+");
+	private JRadioButton r2=new JRadioButton("-");
+	private JRadioButton r3=new JRadioButton("*");
+	private JRadioButton r4=new JRadioButton("/");
+	private JTextField sonuc=new JTextField(10);
+	private JButton enter=new JButton("ENTER");
+	public Exception6(){
+		JPanel pN=new JPanel();
+		pN.setLayout(new FlowLayout());
+
+		JLabel etk1=new JLabel("Sayi 1 ");
+		JLabel etk2=new JLabel("Sayi 2 ");
+		pN.add(etk1);
+		pN.add(sayi1);
+		pN.add(etk2);
+		pN.add(sayi2);
+		add(pN,BorderLayout.NORTH);
+
+		JPanel pC=new JPanel(new FlowLayout());
+		pC.setBorder(new TitledBorder("Islemler"));
+
+		ButtonGroup btg=new ButtonGroup();
+		btg.add(r1);
+		btg.add(r2);
+		btg.add(r3);
+		btg.add(r4);
+		pC.add(r1);
+		pC.add(r2);
+		pC.add(r3);
+		pC.add(r4);
+
+		pC.add(enter);
+		enter.addActionListener(new Dinle());
+		add(pC,BorderLayout.CENTER);
+		JPanel pS=new JPanel();
+
+		JLabel etk3=new JLabel("Sonuc");
+		pS.add(etk3);
+		pS.add(sonuc);
+		add(pS,BorderLayout.SOUTH);
+	}
+
+	public class Dinle implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			try{
+				String s1=sayi1.getText();
+				String s2=sayi2.getText();
+
+				int a=Integer.parseInt(s1);
+				int b=Integer.parseInt(s2);
+
+				if(e.getSource()==enter){
+					if(r1.isSelected())
+						sonuc.setText(""+(a+b));
+					else
+						if(r2.isSelected())
+							sonuc.setText(""+(a-b));
+						else
+							if(r3.isSelected())
+								sonuc.setText(""+(a*b));
+							else
+								sonuc.setText(""+(a/b));
+
+				}
+			}catch(Exception ex){
+				System.out.println(ex.getMessage());
+
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Exception6 pencere=new Exception6();
+		pencere.setLocationRelativeTo(null);
+		pencere.setVisible(true);
+		pencere.setTitle("Hesap işlemi");
+		pencere.setSize(400,200);
+		pencere.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+}
+8-------------Ornek 3 işlem
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.event.*;
+public class Exception7  extends JFrame{
+	private JTextField sayi1=new JTextField (10);
+	private JTextField  sayi2=new JTextField (10);
+	private JRadioButton r1=new JRadioButton("+");
+	private JRadioButton r2=new JRadioButton("-");
+	private JRadioButton r3=new JRadioButton("*");
+	private JRadioButton r4=new JRadioButton("/");
+	private JTextField sonuc=new JTextField(10);
+	private JButton enter=new JButton("ENTER");
+	public Exception7(){
+		JPanel pN=new JPanel();
+		pN.setLayout(new FlowLayout());
+
+		JLabel etk1=new JLabel("Sayi 1 ");
+		JLabel etk2=new JLabel("Sayi 2 ");
+		pN.add(etk1);
+		pN.add(sayi1);
+		pN.add(etk2);
+		pN.add(sayi2);
+		add(pN,BorderLayout.NORTH);
+
+		JPanel pC=new JPanel(new FlowLayout());
+		pC.setBorder(new TitledBorder("Islemler"));
+		r1.setSelected(true);
+		ButtonGroup btg=new ButtonGroup();
+		btg.add(r1);
+		btg.add(r2);
+		btg.add(r3);
+		btg.add(r4);
+
+		pC.add(r1);
+		pC.add(r2);
+		pC.add(r3);
+		pC.add(r4);
+
+		pC.add(enter);
+		enter.addActionListener(new Dinle());
+		add(pC,BorderLayout.CENTER);
+		JPanel pS=new JPanel();
+
+		JLabel etk3=new JLabel("Sonuc");
+		pS.add(etk3);
+		pS.add(sonuc);
+		add(pS,BorderLayout.SOUTH);
+	}
+
+	public class Dinle implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			try{
+				String s1=sayi1.getText();
+				String s2=sayi2.getText();
+
+				int a=Integer.parseInt(s1);
+				int b=Integer.parseInt(s2);
+
+				if(e.getSource()==enter){
+					if(r1.isSelected())
+						sonuc.setText(""+(a+b));
+					else if(r2.isSelected())
+						sonuc.setText(""+(a-b));
+					else if(r3.isSelected())
+						sonuc.setText(""+(a*b));
+					else
+						sonuc.setText(""+(a/b));
+				}
+			}
+			catch(NumberFormatException ex){
+				System.out.println("Lütfen sayı giriniz. "+ex.getMessage());
+				sonuc.setText("");
+				sayi1.setText("");
+				sayi2.setText("");
+			}
+			catch(ArithmeticException ex){
+				System.out.println("Bölen sıfır olmamalı."+ex.getMessage());
+				sonuc.setText("");
+				sayi1.setText("");
+				sayi2.setText("");
+			}
+
+		}
+	}
+	public static void main(String[] args) {
+		Exception7 pencere=new Exception7();
+		pencere.setLocationRelativeTo(null);
+		pencere.setVisible(true);
+		pencere.setTitle("Hesap işlemi");
+		pencere.setSize(400,200);
+		pencere.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+}

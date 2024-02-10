@@ -1,0 +1,364 @@
+A Java method is a collection of statements that are grouped together to perform an operation. When you call the System.out.println method, for example, the system actually executes several statements in order to display a message on the console.
+How to create your own methods ?
+Absolute method:
+
+import java.util.Scanner;
+public class Metot1 {
+  public static int mutlak(int x){
+	  if(x<0)
+		  return x*(-1);
+	  else
+		  return x;
+  }
+  public static void main(String[] args) {
+	int a,b,c,sonuc;
+	Scanner s=new Scanner(System.in);
+	a=s.nextInt();
+	b=s.nextInt();
+	c=s.nextInt();
+
+	sonuc=mutlak(a)+mutlak(b)+mutlak(c);
+	System.out.println(sonuc);
+ }
+}
+
+3 sayının mutlaklarının maximumunun bulunması
+import java.util.Scanner;
+public class MetotMaxVeMutlak {
+		public static int max(int a, int b){
+			int sonuc;
+			if(a>b)
+				sonuc=a;
+			else
+				sonuc=b;
+			return sonuc;
+		}
+		public static int mutlak(int a){
+			int sonuc;
+			if(a<0)
+				sonuc=-a;
+			else
+				sonuc=a;
+			return sonuc;
+		}
+		public static void main(String[] args) {
+			int a,b,c,d, son;
+			Scanner s=new Scanner(System.in);
+			System.out.print("a=");
+			a=s.nextInt();
+			System.out.print("b=");
+			b=s.nextInt();
+			System.out.print("c=");
+			c=s.nextInt();
+			d=mutlak(a)+mutlak(b)+mutlak(c);
+			son=max(mutlak(a),mutlak(b));
+
+			System.out.println("|"+a+"|+"+"|"+b+"|+"+"|"+c+"|="+d);
+			System.out.println("|"+a+"|ve"+"|"+b+"| ve |"+ c+"| nin maximumu="+max(son,mutlak(c)));
+		}
+
+	}
+
+
+
+void  metot tanımlama:
+
+
+Çizgi çizdiren metot
+Aldığı parametre boyutunda çizgi çizdiren
+Aldığı parametre boyutunda ve karakterle çizdiren metot.
+public class MetotIlk {
+    public static void yildizYaz(int x, char t){
+    	for(int i=1;i<=x;i++)
+    	   System.out.print(t);
+    	System.out.println();
+    }
+	public static void main(String[] args) {
+		yildizYaz(5,'+');
+		System.out.println("Mine Mercan");
+		yildizYaz(15,'*');
+		System.out.println("Bilgisayar Öğretmeni");
+		yildizYaz(25,'$');
+	}
+}
+Mutlak değer bulma metodu
+İki sayının maximumunu bulan metot.
+
+Static metotları dış classdan çağırma
+
+
+public class Kütüphanem {
+	public static int max(int a, int b){
+		int sonuc;
+		if(a>b)
+			sonuc=a;
+		else
+			sonuc=b;
+		return sonuc;
+	}
+	public static int mutlak(int a){
+		int sonuc;
+		if(a<0)
+			sonuc=-a;
+		else
+			sonuc=a;
+		return sonuc;
+	}
+	public static int faktoriyel(int a){
+		int sonuc=1;
+		for(int i=1;i<=a;i++)
+			sonuc*=i;
+		return sonuc;
+	}
+	public static int rastgele(){
+		return 1+(int)(Math.random()*10)%10;
+	}
+}
+
+/*Kütüphanem class'ındaki metotları kullanarak rastgele iki sayı
+ üretir. Bunların büyük olanını bulup faktöriyelini alır. */
+
+public class AnaMetot {
+	public static void main(String[] args) {
+
+		int a=Kütüphanem.rastgele();
+		int b=Kütüphanem.rastgele();
+		System.out.println("1.sayı="+a);
+		System.out.println("2.sayı="+b);
+
+		int k = Kütüphanem.max(a, b);
+		System.out.println("En büyüğü "+k+" dir");
+
+		System.out.println(k+"!="+Kütüphanem.faktoriyel(k));
+
+	}
+}
+
+Metot Overloading
+
+public class MetotYukleme {
+	public static void main(String[] args) {
+		double a=max(3, 4);
+		System.out.println("max 3 ve 4  =" + a);
+
+		System.out.println("max 3.0 ve 4.0  =" + max(3.0, 4.0));
+
+		System.out.println("max 3.0, 5.4, ve 10.14 ="+max(3.0, 5.4, 10.14));
+	}
+	public static int max(int num1, int num2) {
+		if (num1 > num2)
+			return num1;
+		else
+			return num2;
+	}
+	public static double max(double num1, double num2) {
+		if (num1 > num2)
+			return num1;
+		else
+			return num2;
+	}
+	public static double max(double num1, double num2, double num3) {
+		return max(max(num1, num2), num3);
+	}
+}
+
+Rastgele 6000 zar atıp saydıran program
+import java.util.Random;
+public class Rastgele1 {
+	public static void main(String[] args) {
+		int say1=0,say2=0,say3=0,say4=0,say5=0,say6=0;
+		int zar;
+		Random r=new Random();
+
+		for(int i=1;i<=6000;i++){
+			zar=r.nextInt(6)+1;
+			switch(zar){
+			case 1:
+				say1++;break;
+			case 2:
+				say2++;break;
+			case 3:
+				say3++;break;
+			case 4:
+				say4++;break;
+			case 5:
+				say5++;break;
+			case 6:
+				say6++;break;
+			}
+
+		}
+		System.out.println(say1+" tane 1");
+		System.out.println(say2+" tane 2");
+		System.out.println(say3+" tane 3");
+		System.out.println(say4+" tane 4");
+		System.out.println(say5+" tane 5");
+		System.out.println(say6+" tane 6");
+	}
+}
+
+Diğer yoldan (sayacları dizide tutarak)
+
+public class Rastgele1 {
+	public static void main(String[] args) {
+		int[] sayac=new int[7];
+
+		int zar;
+		for(int i=1;i<=6000;i++){
+			zar=1+(int)(Math.random()*6);
+			System.out.println(zar);
+			sayac[zar]++;
+		}
+		System.out.println(sayac[1]+" tane 1");
+		System.out.println(sayac[2]+" tane 2");
+		System.out.println(sayac[3]+" tane 3");
+		System.out.println(sayac[4]+" tane 4");
+		System.out.println(sayac[5]+" tane 5");
+		System.out.println(sayac[6]+" tane 6");
+	}
+}
+
+
+Lab Soruları
+
+3 sayının ortalaması (float)  bulan metot ve mainde kullanıcıdan 3 sayı okunup metodun çağırılması
+Ekrana kendisine parametre olarak gelen sayı kadar o mesajı yazdıran bir program. (Yukarıdaki programa parametre eklenecek)
+Parametre olarak gelen iki sayının ortalamasını ve büyük olanı bulan program metot ile yapılacak. (İki metotlu program olsun. Yukarıdakine ek yapılacak)
+Kare çizdiren bir metot yazın. 1 den 10a kadar boyutlarını mainden gönderip 10 kare çizdirin. (void metot)
+Faktoriyel metotu yazılıp. Mainde kullanıcıdan okunan bir sayının faktöriyelinin  yazılması.
+Bir sayının mükemmel olup olmadığını bulan bir metot yazıp. Mainde 1-1000 arasındaki mükemmel sayıları yazdırsınlar
+Asal metodu  yazıp. Main'de 1-1000 arasındaki asalları yazdırsınlar.
+Menülü bir program yaz. 1-Faktöryel hesaplasın 2- Üs hesaplasın 3-Çıkış olsun. Bunu sürekli yapacak 3 seçildiğinde çıkacak. Menünün her bir seçeneğinde bir metot çağırsın.
+
+
+
+Dizi metotta kullanımı
+
+public class DiziReturn {
+public static int[] dizi(int boyut){
+	int [] a=new int[boyut];
+	for (int i = 0; i < a.length; i++) {
+		a[i]=boyut*i;
+	}
+	return a;
+}
+public static void printArray(int[] x){
+	for (int i = 0; i < x.length; i++) {
+		System.out.print(x[i]+"\t");
+	}
+}
+	public static void main(String[] args) {
+		printArray(dizi(5));
+	}
+
+}
+
+Dizi metot 2
+
+public class DiziReturn2 {
+public static int[] dizi(int[] a){
+	int [] x=new int[a.length];
+	for (int i = 0; i < x.length; i++) {
+		x[i]=3*a[i];
+	}
+	return x;
+}
+public static void printArray(int[] x){
+	for (int i = 0; i < x.length; i++) {
+		System.out.print(x[i]+"\t");
+	}
+}
+	public static void main(String[] args) {
+		int[] arr={34,45,12,23,45,7,9,0};
+		printArray(dizi(arr));
+	}
+
+}
+
+
+Dizi metot Reverse (2 arrays)
+
+public class DiziReverse {
+public static int[] dizi(int[] a){
+	int [] x=new int[a.length];
+	for (int i = 0; i < x.length; i++) {
+		x[i]=a[x.length-i-1];
+	}
+	return x;
+}
+public static void printArray(int[] x){
+	for (int i = 0; i < x.length; i++) {
+		System.out.print(x[i]+"\t");
+	}
+}
+	public static void main(String[] args) {
+		int[] arr={34,45,12,23,45,7,9,0};
+		printArray(dizi(arr));
+	}
+
+}
+Dizi metot Reverse (1 array)
+
+public class DiziReverse {
+public static int[] dizi(int[] a){
+	int temp;
+	for (int i = 0; i < a.length/2; i++) {
+		temp=a[i];
+		a[i]=a[a.length-i-1];
+		a[a.length-i-1]=temp;
+	}
+	return a;
+}
+public static void printArray(int[] x){
+	for (int i = 0; i < x.length; i++) {
+		System.out.print(x[i]+"\t");
+	}
+}
+	public static void main(String[] args) {
+		int[] arr={34,45,12,23,45,7,9,0};
+		printArray(dizi(arr));
+	}
+
+}
+
+
+-----------------------Recursion----------------------***
+public class Faktor {
+
+		public static long faktor(int n){
+
+			if (n==0 || n==1)
+				return 1;
+			else
+				return n*faktor(n-1);
+
+		}
+		public static void main(String[] args) {
+			System.out.println("Sonuç="+faktor(6));
+		}
+	}
+
+
+Bir matrisin max değerinin bulunması
+
+public class Dizi2 {
+public static void main( String args[] )
+ {
+	int b[][] = { { 5, 12, 3 }, { 4, 5, 6 } };
+	int max;
+	System.out.println( "bnin elemanları" );
+	for ( int i=0; i < b.length; i++ ) {
+         for ( int j=0; j < b[i].length; j++ )
+            	 System.out.print( b[i][j] + "  " );
+         System.out.println();
+	}
+	max=b[0][0];
+    for ( int i = 0; i < b.length; i++ )  {
+         for ( int j = 0; j < b[ i ].length; j++ ){
+            	 if( b[i][j] >max)
+            		 max=b[i][j] ;
+         }
+    }
+    System.out.println("Max="+max);
+    }
+ }

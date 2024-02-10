@@ -1,0 +1,1522 @@
+
+Introduction to JT
+Thanks again for your interest my Spring Framework content!
+My name is John Thompson, founder of the Spring Framework Guru website. I thought I'd take a moment to say hello and introduce myself.   I've been in the Information Technology field for about 25 years. I actually started in the industry as a software trainer for a company that made and heavily customized enterprise software. I grew out of that role and transitioned into project management. Since I've always been a roll up your sleeves up type of guy, I gradually became more and more technical.   At first I was heavy Oracle. I actually used to work part time as an Oracle DBA and tuning expert. Along the way I started focusing on Java. Initially it was J2EE, but like many others I ran screaming from the complexity of J2EE and towards the simplicity of the Spring Framework. That journey took me to focusing on Java/Spring development as a full time career. I worked as a Spring Source Consultant directly for Pivotal / EMC for about 18 months at one of their major retail clients. And also spoke at Spring One in 2013.  I started my website because learning Spring is not an easy task. The Spring Framework is a very large framework, designed to solve very complex problems. While the documentation for the Spring Framework is generally very good, I felt it really did not address the needs of someone new to Spring. There's a number of resources available to learn Spring, but they all seem light on pragmatic information. Other resources will show you features and functions, but they don't offer insight of how or when to apply those features. I hope people following my content will be able to learn from my years of experience of using Spring in the field.
+In my personal life, I'm an avid triathlete. I'm training for my first Ironman distance race. Hoping a Crossfit Endurance program can help me survive the training and the race, while still having a life!  Please reach out to me anytime. I do try to read and respond to every email!
+John Thompson,
+Become a Spring Framework Guru!
+
+
+History of the Spring Framework
+
+To understand the history of the Spring Framework, you need to consider era when Spring was born. It was the late 90s, and the .COM bubble and Y2K where happening.   The computer science 'experts' at Sun released J2EE to address the computing needs of .COM companies. This was the age of the mainframe. You could not build computers big enough to handle the demands of large .COM web sites - not even a mainframe could handle the load.  Since you could not scale up, you had to scale out. Remember, this is pre 'cloud' computing. On paper J2EE looked great. n-tier computing at its finest. Companies like Sun, IBM, and Weblogic touted J2EE as "THE" way to build scalable enterprise applications. (and hey, it was a great way to sell millions of dollars worth of licensing for J2EE application servers!)  Living with J2EE in production did not work out the way it looked like it should on paper. It was brittle, and complex to maintain. Commercial application servers were expensive to buy, and expensive to buy support contracts for. Open source alternatives were in their infancy at the time.  The market was ripe for disruption. Enter the Spring Framework. Spring was the first viable alternative to J2EE. Spring was light, It didn't need a heavy commercial application server to run on. Coding with Spring was simple. Configuring Spring was simple. Due to Spring's ease of use, the framework was adopted quickly for enterprise application development.   When Spring came to the marketplace, Open Source software was just starting to gain traction in the enterprise. How could Open Source, community projects compete against commercial software companies?   We all know how that played out over the last decade. Open Source software is thriving in the enterprise, and Spring is the #1 framework used for Enterprise class Java development.
+John Thompson,
+Become a Spring Framework Guru!
+
+
+What is Spring Core?
+
+The "Spring Framework" is a large project. Under the Spring Framework label are actually about 20 different Spring projects. Spring MVC, Spring Security, Spring Integration, etc. So, it would be easy to get confused about what "Spring Core" is.  The official Spring documentation, contains this image:
+
+
+"Spring Core" is typically used to refer to the functionality of the Core container. Beans, Core, Context, and SpEL.   While there are about 30 Spring Framework projects, they all depend on this core container. Its this core functionality that has been around since the beginning of the Spring Framework. The core container, which has the Spring Context, manages dependency injection for us via Inversion of Control is used by all other Spring projects.   Cheers,  John Thompson Become a Spring Framework Guru!
+
+
+What's new in Spring Framework 5
+
+Spring Framework 5 was released in September of 2017.
+This is the most significant release of the Spring Framework since its inception back in 2004.
+Checkout this blog post about all the new features inside of Spring Framework 5!
+https://springframework.guru/what-is-new-with-spring-framework-5/
+John Thompson,
+Become a Spring Framework Guru!
+
+Free IntelliJ License for Students
+
+Are you a student just learning to code? If so, JetBrains has an awesome deal for you. You can get all the desktop JetBrains tools for free! For details head over to JetBrains and apply for a student license. 
+https://www.jetbrains.com/student/  I think this is an awesome deal for students learning to code. If you've been following my material, you've seen that IntelliJ is my IDE of choice. I've used IntelliJ for over a decade and have seen JetBrains consistently improve the product. When I've encountered problems, the JetBrains team was there to support me.
+I am a big supporter of IntelliJ, it does make a difference in my day to day productivity.
+Cheers,
+John Thompson Spring Framework Guru
+
+Who is Rod Johnson?
+
+f you're a Spring Developer, you should be familiar with who Rod Johnson is. Australian born Rod Johnson is to the Spring Framework, what James Gosling is to Java. Some would call them the baby daddy.  Rod is credited with creating the Spring Framework. Rod's book Expert One-on-One J2ee Design and Development led to the creation of the Spring Framework.
+Rod went on to form the company SpringSource. Rod sold SpringSource to VMware, who was bought by EMC. EMC later created Pivotal, which is now the company backing the Spring Framework. In 2012, Rod parted ways with VMware and is now on the board of directors of Typesafe - the commercial company backing Scala. I'm curious to see what is to become of that.  I met Rod several years ago at a private party he was hosting. Also in attendance were Crazy Bob Lee, Gregor Hohpe, and John Davies. But that's a story for another day!  Cheers,  John Thompson Become a Spring Framework Guru
+
+January Flash Sale - All SFG Courses Just $9.99
+
+Hola Mustafa!
+I hope your new year is off an awesome start!
+To help you improve your skills and grow your career I'm having a sale on all my courses!
+Today through January 31st get any of my courses for just $9.99!
+Where do you need to grow your skills?
+•	Spring Framework 5?
+•	SQL?
+•	Apache Maven?
+•	Mockito and JUnit???
+•	Docker?
+•	AWS?
+Check out the complete list of my courses in the list below!
+Just use the code JAN2019 at checkout to get any of my courses for just $9.99.
+Don't wait - this offer expires on January 31st.
+John Thompson,
+Become a Spring Framework Guru!
+PS - You can try any course with zero risk. Udemy has a 30 day Money Back Guarantee.
+
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 4,100 over Guru's in an Slack community exclusive to this course! More than 2,700 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+What is Spring Boot?
+
+Spring Boot is a fairly recent project to the Spring Framework family of projects.
+Spring Boot is changing the way we develop Spring applications. Before Spring Boot, you'd usually start off with an empty Maven project and a empty maven POM. Then you would go and add in the Spring Dependencies you needed, configure your build options, decide on the container you wanted to run in, setup the your web.xml, etc. It was easily a half day of monkeying around to kicking off a new Spring project.
+With Spring Boot, head over to start.spring.io, click off the options you want and download a preconfigured Maven or Gradle project. The dependencies are curated by the Spring Boot team, so you're not stuck finding the magic combination of JARs. Spring Boot itself will automatically create common beans with sensible defaults depending on what classes it finds on your classpath. H2 is on your classpath, okay, create a datasource for an in memory database.
+Common configuration tasks which used to take hours and days, now take moments.
+You'll see me use Spring Boot in all of my Spring Courses. In my Spring Core Advanced course, I take a Spring Boot project and back out Spring Boot - just so my students can see everything that Spring Boot is managing for them.
+Spring Boot is the future of Spring application development.
+Spring Boot is much much more than what I've covered here. But there's only so much I can touch on in a short email!
+Cheers,
+John Thompson
+Become a Spring Framework Guru
+
+
+January Flash Sale Continues! All SFG Courses Just $9.99
+
+Hola Mustafa!
+Just a quick reminder that through January 31st you can get any of my courses for just $9.99!
+How are your Apache Maven skills???
+My latest course - Apache Maven: Beginner to Guru is on fire!
+It's already the bestselling Maven course on Udemy.
+And I just released another 2.5 hours of content this morning!
+This is the most complete course you will find on Apache Maven.
+In my humble opinion, of course!
+Just use the code JAN2019 at checkout to get any of my courses for just $9.99.
+Don't wait - this offer expires on January 31st.
+John Thompson,
+Become a Spring Framework Guru!
+PS - You can try any course with zero risk. Udemy has a 30 day Money Back Guarantee.
+
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 4,100 over Guru's in an Slack community exclusive to this course! More than 2,700 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+Cupids Undie Run
+
+Once a year, I ask my community to support a charitable cause.
+For last several years I've asked for support of Cupid's Undie Run.
+In 2018 people in my community helped raise $2,125. Which is just AWESOME.
+Cupid's Undie Run is an annual event which raises money to help fight Neruofibromatosis - aka NF.
+NF is a condition which causes tumors to grow on the brain, spinal cord, and nerves.
+It's just an awful condition, which often show's up in early childhood.
+I personally know a little girl here in St Petersburg with the condition.
+There's also people with my community with NF.
+I found this out last year when folks emailed me - thanking me for my fundraising efforts - because they have NF.
+For 2019, I'm setting a goal to beat what we raised 2018.
+Please click here to donate to Cupid's Charity.
+Any amount you can give will help!
+Even if it is just $5 - it all ads up!
+A sincere thank you!
+John Thompson,
+Become a Spring Framework Guru
+
+
+
+What is Spring MVC?
+
+So, what is Spring MVC? In a nutshell, Spring MVC is the web front end for the Spring Framework. The request can be a traditional web request for a web page, or a Web Service request (SOAP or RESTFul).
+Spring MVC is based on the programming paradigm of Model - View - Controller. The MVC pattern is not Spring, nor Java specific. The MVC pattern has been adapted by a number of languages, and been in use well before Java became the #1 programming language. You'll see the MVC design pattern in just about any common programming language, because of its benefits.
+The Model (M) is typically the data in the request or response. The model is just data. The View (V) decides how to render the data of the model. The model doesn't care, nor need to know if the client wants HTML or JSON. The Controller is like a traffic cop. The controller decides how to handle the request. The request comes in, the controller returns the model to the appropriate view.
+The MVC design paradigm is very popular because of the separation of concerns. Each component has a job. One specific job. This may remind of you of the Single Responsibility Principle too.
+Unfortunately, poor coding practices often violate this separation of concerns. Too often I've seen legacy code calling a database from a JSP page. This is what is known as a code smell. Or a bad programming practice. The view (JSP) is now tightly coupled to the database.
+Spring MVC is well designed and follows commonly accepted programming paradigms. Unfortunately, it cannot prevent programmers from creating code smells! Could you access a database from a JSP page while using Spring MVC? Of course you can. The framework cannot stop you from making poor choices.
+Cheers,
+John Thompson Become a Spring Framework Guru
+
+
+Planning 2019 - Requesting Your Help
+
+Hola Gurus,
+Quick request for your help.
+I'm doing some planning on the courses I wish to make in 2019.
+Can I get your feedback on this Google Form?
+It will only take you a few moments.
+I have several ideas for courses, which are listed on the form.
+What are you interested in?
+Please let me know by clicking here!
+Spring Security, Spring Boot Micro Services, Spring Data JPA, Spring Data REST, Spring Cloud, AWS ECS, AWS EKS, Spring Integration, Spring Certification Exam Prep, Java 11.
+Thank you in advance!
+Your feedback is very valuable!
+John Thompson,
+Become a Spring Framework Guru!
+
+
+Spring Framework Guru on YouTube
+
+Hola!
+Did you know I have a YouTube channel too? On my YouTube Channel, you can find a variety of 'how to's' around the Spring Framework, and free previews of my courses.
+For example, here's a free preview of my Spring Core course:
+
+Please subscribe to my channel so you will always receive my lastest updates!
+John Thompson,
+Become a Spring Framework Guru
+PS - Have a suggestion of a video you'd like to see? Drop me a note! Just reply to this email!
+
+
+Get SFG Swag/Courses - Cupids💘Fundraising Contest
+
+Hola Gurus!
+For the 2019 Cupid's Undie Run, I'm currently short of my goal to raise $2,500 to help fight NF.
+Right now we've only raised $545.
+For those who have donated - huge thank you!
+To encourage others to donate I'm having a fund raising contest where your donations can earn you free SFG swag or courses.
+If you're not familiar with neurofibromatosis (NF), its a rare genetic disorder that causes tumors to grow on nerves throughout the body.
+It really is an awful disease - often appears in early childhood.
+I'm having a fundraising contest for the 2019 Cupids Undie Run:
+•	Donate $75 or more get a free SFG course OR free SFG shirt
+•	Donate $100 or more get a free SFG course AND a free SFG shirt
+•	Donate $150 or more get a free SFG course AND a free SFG shirt AND a free SFG @Bean hat.
+•	Donate $350 or more get a free access to ALL SFG courses AND a free SFG shirt AND a free SFG @Bean hat AND any SFG course published in 2019
+And FYI, the SFG @Bean hat is very exclusive - only two of them exist!
+Cupids is one of my favorite charities to support. They are a smaller charity, so I feel we are making a bigger difference.
+Even if you cannot afford a larger donation, smaller donations add up. Just $5 or $10 will help!
+Please click here to donate today!!!
+FAQs:
+•	If I already donated, can I donate more to reach an award level? Yes! I will accept total donations for 2019 - but please email me so I don't miss it!
+•	How do I claim my free course? Email me with your receipt and I'll send you a free coupon code.
+•	How many courses are you making in 2019? No promises - I'm looking at 3-4 courses in 2019.
+•	What are the courses? Still finalizing - expect Jedi Level Ninja like Spring skills!
+•	Who is donating the free swag? That would be me - each physical item costs me $25-$40 (depending on shipping)
+•	When is the run? I do the run on February 9th, but you have until the last day of February to donate.
+•	Do you really run in your underwear? Yep! But its for a good cause. After all, its for the kids!
+Thank you so much for your support!
+You guys are awesome in helping reach the $2,500 goal!
+John Thompson,
+Become a Spring Framework Guru!
+PS - Please click here to donate and fight NF!
+
+
+What is Thymeleaf?
+
+For a long time the Java community has been fascinated with templating engines. I think this may be in part due to the pain caused by dealing with JSPs. But I digress...  Thymeleaf is a relative newcomer when it comes to Java templating engines. What makes Thymeleaf interesting is that it used a natural templating language. Meaning you can view your templates in a browser. Yep, the template language is HTML compliant. Try viewing a JSP page in Chrome and not getting a ganked up result!   This makes Thymeleaf a true pleasure to develop with. You don't need your application deployed to Tomcat. You're not bouncing Tomcat with each refresh. Just make the styling changes to the HTML, save and view in your favorite browser. (Hopefully not IE!)  Because of this ease of use, Thymeleaf is quickly becoming popular in the Java and Spring community.   Cheers,  John Thompson Become a Spring Framework Guru
+
+So - What is NF?
+
+A few years ago I was unaware the condition known as neurofibromatosis - aka NF.
+It was through my involvement with Cupid's Undie run that I first learned about NF.
+Last year, one of my students, who has NF, reached out and thanked me for raising money to fight NF.
+I asked him to write something about living with NF.
+This is what he wrote:
+Neurofibromatosis is a rare genetic disorder that causes tumors to grow on nerves throughout the body. I know something about this disease because I was born with it and diagnosed at the age of 2. Over the last 30 years, I have had over 35+ operations to remove tumors from my head all the way down to my feet. I had to learn to deal with learning disabilities, how to deal with the deformation of my foot and to deal with chronic pain from the tumors pressing on the nerves. This disease has at times limited my ability to work full-time and do normal daily activities like taking care of the yard, going to the store, and spending time with family and friends in the outdoors. I hope that one they will find a cure for all three types of Neurofibromatosis.
+He has asked to remain anonymous, since he would like the companies he is currently applying to not to know about his disease.
+Learning to code take a lot of hard work.
+Can you imagine learning to code with NF?
+Your generous contributions are making a difference!
+So far in 2019, we have raised $1,625!
+Thank you so much!!
+That puts me to 65% of my goal.
+My fundraising contest for the 2019 Cupids Undie Run continues:
+•	Donate $75 or more get a free SFG course OR free SFG shirt
+•	Donate $100 or more get a free SFG course AND a free SFG shirt
+•	Donate $150 or more get a free SFG course AND a free SFG shirt AND a free SFG @Bean hat.
+•	Donate $350 or more get a free access to ALL SFG courses AND a free SFG shirt AND a free SFG @Bean hat AND any SFG course published in 2019
+Even if you cannot afford a larger donation, smaller donations add up.
+Just $5 or $10 will help!
+Please click here to donate today!!!
+FAQs:
+•	If I already donated, can I donate more to reach an award level? Yes! I will accept total donations for 2019 - but please email me so I don't miss it!
+•	How do I claim my free course? Email me with your receipt and I'll send you a free coupon code.
+•	How many courses are you making in 2019? No promises - I'm looking at 3-4 courses in 2019.
+•	What are the courses? Still finalizing - expect Jedi Level Ninja like Spring skills!
+•	Who is donating the free swag? That would be me - each physical item costs me $25-$40 (depending on shipping)
+•	When is the run? I do the run on February 9th, but you have until the last day of February to donate.
+•	Do you really run in your underwear? Yep! But it's for a good cause. After all, its for the kids!
+Thank you so much for your support!
+You guys are awesome in helping reach the $2,500 goal!
+John Thompson,
+Become a Spring Framework Guru!
+PS - Please click here to donate and fight NF!
+Special thanks to the following awesome donors:
+•	Matt Metcalf
+•	Khalid Khattab
+•	Karly Schweitzer
+•	Alamgir Kamal
+•	Saravanan Sankaran
+•	Johannes van Niekerk
+•	Dorothy Rifai
+•	Donald Coffin
+•	Ronald Harin
+•	Istvan Nemeth
+•	Emmett Walsh
+•	Rob Arnhart
+•	Dragomir Kamenov
+•	Edgar Saenz
+•	Donald Trummell
+•	Don Krause
+•	James Birchfield
+
+
+Who is Josh Long?
+
+If you're getting into the Spring Framework, Josh Long is a name you should be familiar with. Josh is the Spring Developer Advocate at Pivotal. Josh's whole job is to support you, as a Spring Developer. Josh is a committer on the Spring Framework, and you'll often see Josh speaking at conferences, and webinars. Josh is one of my favorite speakers to see. I always pick up some cool stuff from him!  Josh is very active on twitter, he's worth following if you use Twitter. By following Josh you can stay up on the latest news in Spring.  I've met Josh a few times at several SpringOne conferences. He's a great guy, with a ton of energy. (actually hard to keep with with sometimes!)  One thing for sure about the Spring and Java communities, is they are always evolving. Josh is a resources you should be familiar with. He's a great resource to follow to stay up on current trends.   Josh is also the co-author on the book Spring Recipes. I own a copy of this book. It's a nice pragmatic guide to leveraging Spring features / projects for common enterprise applications. If you're a bookworm, this is valuable addition to your library.   Cheers,  John Thompson Become a Spring Framework Guru
+
+Why Spring Data JPA is so cool!
+
+Spring Data JPA is one of my favorite Spring Projects. For you as the Spring Developer, it is a true time saver.   One of the tasks as a developer you are often faced with is putting stuff in a database, and getting stuff from a relational database. In the Java world, we use JDBC to communicate with the database. The Java Persistence API, or JPA is the standard way of mapping Java objects to relational database tables (aka ORM).  Working with JPA over JDBC is a huge timesaver alone. Once you have JPA configured, you'll be writing significantly less code using JPA than you would with JDBC.  What I love about Spring Data JPA, is this can reduce the code you need to write even further. Through the use of a Spring Data JPA Repository, if you had a User domain object with the property of firstName, you could define a method called findByFirstName(String firstName) and Spring Data JPA will handle all the implementation details for you. No need to write SQL, or any query. No need to deal with an entity manager or database connection. All handled for you.  I'm a big fan of Spring Data JPA. I personally use it whenever I can. If you're using JPA to persist data, Spring Data JPA is a Spring project that needs to be on your short list!  Cheers,  John Thompson Become a Spring Framework Guru
+
+What is JDBC Template?
+
+In my last email I wrote about why Spring Data JPA is so cool to use. In it I mentioned using JDBC.   If you've used just JDBC to get things in and out of a database, you know it can be rather verbose. JDBC can also be very finicky to deal with.   While JPA is clearly the preferred way of interacting with a database, there are times where you need more fine grained access. Maybe you're just extracting data from a legacy database for some type of data conversion or reporting need. It may not be worth going through the work of setting up JPA.  This is where Spring's JDBC Template steps in. If you're working within a Spring environment, JDBC Template is the preferred method of access the database directly. You can read more about JDBC Template here. I highly recommend you use JDBC Template over rolling your own JDBC connection. Using JDBC Template will help you from preventing common errors. 
+https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#jdbc
+https://spring.io/projects/spring-data-jpa
+  Cheers,  John Thompson Become a Spring Framework Guru
+
+
+We did it - Thank You!!!
+
+Yesterday your generous donations reached my goal of raising $2,500 to help in the fight against NF!
+A special Cupid's THANK YOU from me and Jake!
+
+Tomorrow I'll be dressing up crazy and doing the Cupid's Undie run.
+And because of you, I'll be running as as the #2 fundraiser in St Petersburg, FL.
+Which is just awesome! Thank you so much!!!
+Let's exceed my goal now!
+Smaller donations really have helped.
+How about donate $10 and get my SQL course for free?
+Click here to donate, then click here and enroll in SQL: Beginner to Guru for free.
+This is on the honor system, so please don't abuse it!
+Of course my fundraising contest for the 2019 Cupids Undie Run still continues:
+•	Donate $75 or more get a free SFG course OR free SFG shirt
+•	Donate $100 or more get a free SFG course AND a free SFG shirt
+•	Donate $150 or more get a free SFG course AND a free SFG shirt AND a free SFG @Bean hat.
+•	Donate $350 or more get a free access to ALL SFG courses AND a free SFG shirt AND a free SFG @Bean hat AND any SFG course published in 2019
+FAQs:
+•	If I already donated, can I donate more to reach an award level? Yes! I will accept total donations for 2019 - but please email me so I don't miss it!
+•	How do I claim my free course? Email me with your receipt and I'll send you a free coupon code.
+•	How many courses are you making in 2019? No promises - I'm looking at 3-4 courses in 2019.
+•	What are the courses? Still finalizing - expect Jedi Level Ninja like Spring skills!
+•	Who is donating the free swag? That would be me - each physical item costs me $25-$40 (depending on shipping)
+•	When is the run? I do the run on February 9th, but you have until the last day of February to donate.
+•	Do you really run in your underwear? Yep! But it's for a good cause. After all, its for the kids!
+John Thompson,
+Become a Spring Framework Guru!
+PS - Please click here to donate and fight NF!
+
+
+Too Much Email?
+
+It's been about 3 weeks since we connected. I hope you've been finding the content of my emails valuable in your journey with learning the Spring Framework! If you do not find value in my emails and wish to unsubscribe, there is a link at the bottom this email.  It's okay if you wish to unsubscribe. I don't take it personal! If you don't find my email content valuable, it's actually much better for me if you do. It helps me to maintain a higher quality subscriber list. When more people are reading and interacting with my emails, it's less likely for my emails to get marked as spam or promotions. It also helps me keep my costs down. (Yes, I get charged for the number of subscribers on my list)   But if you don't wish to unsubscribe, stay tuned! I have a lot more great content around the Spring Framework and Java development coming your way!   Cheers,  John Thompson Become a Spring Framework Guru
+
+What's a couple decimals between friends?
+
+About 8 years ago, I was working at a startup. It was like the wild west. There was no structure or procedures. Way too often, people were coding and testing - right in production.
+Clearly, not good. Especially, considering we were moving money around.
+We had a task to update customer balances with ACH transfers using a file received from our bank. The task was not too complicated. A simple flat file with account and transfer amount.
+Really nothing all that sexy. No JSON, no XML. Just a simple text file. Rather boring.
+It's rather common for financial files to use a implied decimal. Thus, $10 dollars in the file would be 1000. The decimal is implied 1000, is really 10.00.
+My buddy worked on the code to parse the file and update accounts. We didn't know the file had a implied decimal.
+The fatal mistake he made? He actually checked the code into source control.In this crazy startup environment, he did the right thing and actually checked code into source control.
+That evening, another developer saw the code in source control, and thought he'd do us a favor and deploy the code to production. (completely untested code)
+The code worked flawlessly. Our banking partner dropped a file, the code picked up the file, and updated accounts. With amounts two decimals off.
+Luckily, we didn't have a lot of customers at the time, and only a thousand accounts got updated. 
+About two days later we had the mess cleaned up. Data fixed, customers apologized to, and we survived several floggings from management.
+Today we laugh about the incident. After all, what's a couple decimals between friends? Right?
+Moral of the story? There's so much we were doing wrong... I'm not sure where to start!
+Processes and procedures do add overhead, and take time to manage. But they exist for a reason. That reason is to prevent mistakes like this. In this situation, we were taking shortcuts, and got burned because of it.
+Cheers,
+John Thompson,
+Become a Spring Framework Guru
+
+
+February Flash Sale!
+
+Hola Gurus!
+I'm having a flash sale on all of my courses!
+Through this Friday, get any of my courses (below) Udemy for just $10.99.
+A few highlights:
+•	The exclusive Slack community for Spring Framework 5: Beginner to Guru is on fire! 4,600 students have joined. I do not know of a larger or more active community of people learning Spring!
+•	In less than two months, Apache Maven: Beginner to Guru has become a Best Selling course on Udemy. 1,200 students have already enrolled!
+•	In January, I reached 50,000 students on Udemy. Thank you for your support!
+•	How's your SQL skills? NoSQL grabs the headlines, while SQL is still the work-horse of the enterprise!
+Just use the code FEB_2019 to get any of my Udemy courses for just $10.99.
+Don't wait, this price will end on Friday!
+Happy learning!
+John Thompson,
+Become a Spring Framework Guru!
+PS - Try any of my courses risk free with Udemy's 30 day money back guarantee.
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 4,600 over Guru's in an Slack community exclusive to this course! More than 2,700 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+But my 2000 line method unit tested just fine!
+
+No joke, I had a developer argue with me that their 2,000 line method unit tested just fine. One entry point, followed by 2,000 lines of code.
+Are you skeptical? Yeah, so was I.
+If we used a code coverage tool, what do you think it would reflect? Would the conditions of every if statement be covered? Every switch statement covered? Every exception covered?
+I saw the code, and the tests. I assure you, there was plenty of code not getting tested.
+Writing software is a craft. If you learn how to use a saw to cut wood, are you a master carpenter?
+No. It takes time to develop skills to turn raw wood into beautiful cabinets.
+It also takes time to learn how to write quality code. In this case, the developer I was working with did not know a 2,000 method was a poor programming practice. This wasn't a Object Oriented programming style that elegantly applied the SOLID principles. It was a long drawn out procedural coding style. While Java is a Object Oriented language, you can still write procedural code in Java. (I've seen it way too many times!!!)
+How long should your methods be?
+A great rule I learned from one of Uncle Bob Martin's books, Clean Code, is your methods should be no longer than about one screen of code. Just one. If you need to scroll down, chances are you're doing something wrong.
+This is a very simple rule you can start applying tomorrow. If the section of code you are working on is getting longer than a about screenful, chances are:
+•	You're slipped into a procedural style of coding
+•	Your code is doing too many things - violating the Single Responsibility Principle.
+•	Your code is no longer 'unity', not easy to unit test
+•	Your code quality suffers because of poor test coverage, because unit tests are too complex to write properly
+•	Your code is brittle to changes. Modifications are no longer encapsulated - changing one thing, breaks another!
+This is just one tip from Uncle Bob's book. Clean Code really is one of my favorite programming books. I've read it several times. Reading it will help you develop your own software craftsmanship. I consider the book one of those must have's for any developer's bookshelf.
+https://springframework.guru/solid-principles-object-oriented-programming/
+https://springframework.guru/principles-of-object-oriented-design/single-responsibility-principle/
+
+Cheers,
+John Thompson,
+Become a Spring Framework Guru
+
+Spring Framework Guru on Facebook
+
+Hey,
+Have you seen my Facebook page yet?
+Head on over and like my Facebook page and you'll get notified of my latest posts!
+Thanks!
+John Thompson,
+Become a Spring Framework Guru!
+https://www.facebook.com/springframeworkguru/
+
+
+How do you secure Spring Applications?
+
+When it comes to securing access to Spring based applications, Spring Security is the tool you want to be using. Spring Security is a standalone project under the Spring family of projects and it is actively maintained by Pivotal.   Spring Security is designed for securing access to Java based applications. The most common use case is with web based Java applications, but it actually can be used with any Java application, whether it is a GUI client or some type of exposed API.  Spring Security looks at two areas when allowing access to an application. One is authentication, the other is authorization. The first is authentication, which asks the question who am I? This establishes identity. This could be a user id password from a database or LDAP server. Or in other cases from a 3rd party via OpenID. The second area is authorization. Is the user allowed to take the requested action. This asks the question are they allowed to do this?  Spring Security is a mature product and has been around sometime. It is common to see used for building enterprise applications in Spring. Spring Security can easily be used with LDAP servers or Microsoft Active Directory. Having this integration with centralized identity servers is important to companies because of compliance issues. When an associate leaves the company, the company need to have established procedures to terminate the associate's access to its systems. And being able to integrate with LDAP / Active Directory is the perfect tool for corporate compliance.  Cheers,  John Thompson Spring Framework Guru  PS - If you want to learn more about Spring Security, I do have a course under construction. You can learn more about it here.
+https://spring.io/projects/spring-security
+https://springframework.guru/spring-courses/spring-security-course/
+
+Are you Open or Closed?
+
+So are you Open or Closed?  Actually, I'm talking about the Open Closed Principle of Object Oriented design. This states your classes should be open for extension, but closed to change. It's a design principle which will help you write better code. If you're not familiar with the Open Closed Principle, head over to my blog and learn more!
+https://springframework.guru/principles-of-object-oriented-design/open-closed-principle/  Cheers,  John Thompson Spring Framework Guru
+
+Why I use IntelliJ
+
+In all my videos, you will see me using the IntelliJ IDE. This is my preferred IDE for use.
+But if you follow videos produced by Pivotal, you will typically see them using STS - Spring Tool Suite. This is an extension of the popular Eclipse IDE. So if you're new to Spring development, you may be confused why I chose to use IntelliJ IDEA over STS.
+Java developers can be rather passionate about their IDE of choice. I'm no exception. I feel IntelliJ is a better option for Java development. I even produced a short video about it!
+I feel so strongly about IntelliJ, my company is actually a partner with IntelliJ. Through this partnership, I'm able to offer students in my premium courses an extended trial license to IntelliJ IDEA.
+Cheers,
+John Thompson
+Spring Framework Guru
+PS - you can get a extended subscription to IntelliJ IDEA Ultimate when you enroll in my Spring Core Ulitmate course bundle.
+https://courses.springframework.guru/p/spring-core-ultimate
+
+
+Getting Social with Spring Social
+
+Wondering what Spring Social is? Well, it is not a high school dance in the Springtime!
+Spring Social is a Spring project designed to help you interact with various Social Networks using the Spring Framework.
+Have you seen websites that allow you to sign in using Facebook or Twitter? This is exactly what Spring Social can do for you. When you're building a web application using Spring and Spring MVC, you can add Spring Security / Spring Social to allow users to authenticate in your application using popular social networks.
+But Spring Social is not limited to just authentication. Each of the social networks have APIs you can use. Maybe you want to get a user's birthday from their Facebook profile, or maybe send a Tweet for them. Yep, there's an API for that!
+Cheers,
+John Thompson Spring Framework Guru
+http://projects.spring.io/spring-social/
+
+
+Batching things up with Spring Batch
+
+Much of today's literature around software development is around real time processing. For example, handling a web request, this is real time processing. (Some may argue, near time - but I digress)
+But in the enterprise, batch processing is still alive and well. Sometimes it's just how legacy systems work. Other times, batch processing can be the right tool for the job. I personally favor realtime processing over batch whenever possible. However, sometimes things are out of your control. Maybe you're depending on a 3rd party vendor to deliver a daily extract file? Or you need to deliver a daily summary report to someone else in the enterprise? In cases like these, a batch process works out to be the right tool for the job.
+Batch processing in the enterprise is not going anywhere anytime soon. When you do need to perform batch processing, Spring Batch is the natural tool of choice. This is a mature set of Spring tools to handle your batch processing needs.
+Cheers,
+John Thompson Spring Framework Guru
+https://spring.io/projects/spring-batch
+
+
+Just who is Chris Schaefer?
+
+So, just who is Chris Schaefer? Yesterday, I told you a little bit about Spring Batch. Chris is a Pivotal employee and a committer on the Spring Batch project. Chris also leads the Sarasota JUG. (I used to speak there occasionally years ago)
+Chris and I also worked together supporting Spring development at Kohls. Pivotal had both of us Florida boys flying up to Milwaukee, WI several times a month for about 18 months. Milwaukee is a great town - in the summer time. Winters in Milwaukee are COLD. Chris and I spent more than one evening complaining about the snow and ice in Milwaukee!
+Chris is also a co-author of Pro Spring. This is the 4th edition of a cornerstone book covering the Spring Framework (updated for Spring 4). This is one of those books worthy of adding to your library.
+Cheers,
+John Thompson Spring Framework Guru
+
+Spring Framework Guru on Facebook
+
+Hola!
+Did you know I have a Facebook Page? Here I post my latest blog posts, and helpful news around the Spring Framework. Check my page out and please like my page if you like what you see!
+Cheers,
+John Thompson,
+Spring Framework Guru
+
+
+Using pagination in Hibernate
+
+When dealing with large sets of data, it's a common use case to display the data in scrollable chunks to the user.
+If you're dealing with a relational database and using Spring, it's likely under the covers you'll be using Hibernate for your ORM. Spring often abstracts Hibernate, so you're not exposed to what's happening under the covers. But I feel it's important to understand what is actually happening. Thus, I wrote a blog post on pagination in Hibernate. If you find the the post helpful, please leave me a comment!
+Cheers,
+John Thompson Spring Framework Guru
+https://springframework.guru/hibernate-pagination/
+
+Which flavor of Linux should you be using with Java
+
+Linux, like craft beer comes in many different flavors. And like craft beer, people have some very passionate opinions about which Linux distribution is "best".   Is SUSE really better than Red Hat? Is Red Hat a better option than Ubuntu? CentOS? Oracle Linux? Amazon Linux? Debian? OpenSUSE?   Oh my, the choices are endless. I've recorded a short video on Youtube to offer my opinion on this matter.
+Cheers,
+https://www.youtube.com/watch?v=94BJY48LdjY  John Thompson Spring Framework Guru
+
+How to process JSON data in Java
+
+A lot of times when you're working with Spring, marshalling to and from JSON is often obfuscated by the framework. Meaning, under the covers Spring is taking a JSON string and converting it to a Java object, or taking a Java object and creating a JSON string for it.   But let's take a closer look under the covers at what Spring is doing. While there are options, typically Spring will be using Jackson to marshal / unmarshal JSON data. I wrote a blog post to get you introduced to Jackson.   As a Java developer, you will be working with JSON to communicate with other systems. When I need to work directly with JSON, like many others, Jackson is the tool set I turn to.  Cheers,  John Thompson Spring Framework Guru
+https://springframework.guru/processing-json-jackson/
+
+Using Logback with Spring Boot
+
+When you're developing enterprise class applications, logging is an important aspect. There's a crazy number of options available for logging with Java. And Java developers can have very passionate opinions about which logging framework is the best to use.  While Spring and Spring Boot do not mandate a specific logging framework, Spring Boot does by default use Logback, which is a solid option for your logging needs.   I've written a blog post about configuring Logback with Spring Boot. You can check it out here.   Cheers,  John Thompson Spring Framework Guru
+https://logback.qos.ch/
+https://springframework.guru/using-logback-spring-boot/
+
+Can you call a Java function from a Thymeleaf Template?
+
+I was asked the other day how do you call a Java function from a Thymeleaf template. While this is something you probably can do, it would be a very poor programming practice.
+I took a moment to explain why this is such a bad idea on my YouTube channel. Check it out!
+https://www.youtube.com/watch?v=qFNuIw11_Ko
+Cheers,
+John Thompson,
+Spring Framework Guru
+
+Tabs vs Spaces
+
+Tabs vs Spaces - an ongoing debate in the developer community.
+Enjoy this clip from HBO's Silicon Valley:
+Silicon Valley is one of my favorite shows. I've done a lot of work out in the valley, and this show is a little too close to reality!
+In case you're wondering. Spaces. Definitely spaces.
+And I also use vim over emacs.
+John Thompson,
+Spring Framework Guru
+https://www.youtube.com/watch?v=SsoOG6ZeyUI
+
+A letter to a Junior Engineer
+
+This is a great post by Joe Moore.
+Joe is a full stack developer, who works for Pivotal. He brings up some great points in his post.
+If you're just starting out your career as a developer, this is a great read!
+Enjoy!
+John Thompson,
+Become a Spring Framework Guru!
+https://builttoadapt.io/a-letter-to-a-junior-engineer-edec0e260b87
+
+
+Creating JSON with Jackson
+
+As you may know, Jackson is the default JSON library used by Spring Boot.
+Under the covers, its Jackson that is converting JSON to Java POJOs, or Java POJOs to JSON.
+Jackson gives you a tremendous amount of control over the aspects of marsalling and unmarshalling JSON.
+Checkout my detailed blog post about common annotations you can use to control the behavior of Jackson.
+Cheers!
+John Thompson,
+Become a Spring Framework Guru!
+https://springframework.guru/jackson-annotations-json/
+
+Java 8 forEach Loops
+Java 8 brought us new functionality with the Java forEach loop.
+This is a very important and useful feature in Java 8.
+I know a lot of more seasoned Java developers (like myself!) LOL are still getting comfortable using Java forEach loop.
+If you're new to Java or just need to get up to speed on the Java 8 forEach loop, check out my blog post on it here!
+John Thompson,
+Become a Spring Framework Guru!
+https://springframework.guru/java-8-foreach/
+
+Jackson Mix-In Annotations
+A few days ago I told you about using Jackson to work with JSON.
+As you saw, Jackson right out of the box gives you some great functionality.
+And using Java annotations, you get a lot of control over how JSON is marshalled and unmarshalled to / from Java POJOs.
+But, what if you don't have access to the Java source code of the POJOs you're working with.
+No worries! Checkout the Jackson Mix-In annotation in my blog post here!
+John Thompson,
+Become a Spring Framework Guru!
+https://springframework.guru/jackson-mix-in-annotation/
+
+Showing SQL Used by Hibernate
+Hibernate is a very common ORM used with Spring Framework applications. I frequently use Hibernate and Spring Data JPA when building Spring Applications.
+Hibernate does a great job of abstracting the database from our Java code.
+Its awesome you can write a lot of functionality against a database without writing any SQL code.
+BUT - there are times you wish to see what Hiberate is doing.
+There are several tools we can use with Hibernate and Spring to log the SQL geneated to the console.
+Checkout this blog post about how you can enable the output of the SQL generated by Hibernate in your application.
+John Thompson,
+Become a Spring Framework Guru!
+https://springframework.guru/hibernate-show-sql/
+
+Using JAXB with Java
+
+When it comes to processing XML with Java, JAXB is the work horse of the XML Java world.
+
+JAXB has been around for a very long time. It is mature and has some very deep capabilities.
+
+If you're new to JAXB, check out this blog post to get you started.
+
+Enjoy!
+
+John Thompson,
+
+Become a Spring Framework Guru!
+https://springframework.guru/using-jaxb-for-xml-with-java/
+
+Spring Component Scan
+
+The Spring Framework will do something called a component scan. This is when Spring scans a package structure looking for classes annoated as Spring components.
+
+If you're used to using Spring Boot, you get his for free. Spring Boot will automatically scan the package and below of the main class of the Spring Boot application.
+
+Of course, you do not want to scan every class on the classpath. A large Java project can have 10's of thousands of classes, so this would be very costly.
+
+The Spring Framework does offer you a lot of control over how it will conduct scanning for Spring components.
+
+Thus, you can make your component scans very targeted, limiting the impact on the stratup time of your application.
+
+If you'd like to learn more about the capabilities of Spring's component scans, checkout this blog post.
+
+John Thompson,
+
+Become a Spring Framework Guru
+https://springframework.guru/spring-component-scan/
+
+@RequestMapping with Spring
+
+Its a faily common task to deal with web clients when working with the Spring Framework. You might be just serving up simple HTML pages using Thymeleaf, or maybe writing Restful webservices with Spring MVC.
+In either case, one tool you can turn to is the @RequestMapping annoation. Through this annoation, you can desigate which controller method to use for responding to specfic requests.
+This annoation gives you a great deal of control in mapping requests.
+To learn more about Spring's @RequestMapping annotation, checkout this blog post!
+John Thompson,
+Become a Spring Framework Guru
+https://springframework.guru/spring-requestmapping-annotation/
+
+March Course Sale
+
+Hola Gurus!
+I'm having a sale on all of my courses.
+Today through Friday, you can purchase any of my courses for just $10.99.
+Just use the code MAR2019 at checkout.
+If you need to brush up your testing skills, be sure to checkout my Testing Spring Boot course. This is one of the most comprehensive testing courses available on Udemy. Packed with content on Test Driven Development, JUnit 4 and JUnit 5, Mockito, and of course Spring Boot.
+Don't wait.
+This $10.99 sale will end on Friday!
+John Thompson,
+Become a Spring Framework Guru
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,000 over Guru's in an Slack community exclusive to this course! More than 2,700 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+https://www.udemy.com/course/spring-framework-5-beginner-to-guru/?couponCode=MAR2019
+https://www.udemy.com/reactive-programming-with-spring-framework-5/?couponCode=MAR2019
+https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=MAR2019
+https://www.udemy.com/sql-beginner-to-guru-mysql-edition/?couponCode=MAR2019
+https://www.udemy.com/apache-maven-beginner-to-guru/?couponCode=MAR2019
+https://www.udemy.com/docker-for-java-developers/?couponCode=MAR2019
+https://www.udemy.com/spring-core-devops-on-aws/?couponCode=MAR2019
+https://www.udemy.com/ready-for-production-with-spring-boot-actuator/?couponCode=MAR2019
+https://www.udemy.com/angular-4-java-developers/?couponCode=FEB_2019
+https://www.udemy.com/mastering-thymeleaf-with-spring/?couponCode=MAR2019
+https://www.udemy.com/spring-core/
+https://www.udemy.com/spring-core-advanced-beyond-the-basics/?couponCode=MAR2019
+
+March Course Sale Ending Friday
+
+ Hey - Just a quick reminder, my March course sale is ending this Friday.
+How's your SQL skills?
+When I was starting out, SQL was one of the first programming languages I learned.
+While NoSQL databases have been rising in popularity and grabbing headlines, SQL databases continue to be the workhorse of the enterprise.
+SQL is an absolute must have skill.
+If you are new to SQL, checkout my SQL Beginner to Guru course!
+Or checkout all of my courses below!
+Don't wait.
+This $10.99 sale will end on Friday!
+John Thompson,
+Become a Spring Framework Guru
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,000 over Guru's in an Slack community exclusive to this course! More than 2,700 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+Hola Gurus!
+Just a quick reminder - my March Course sale is ending today.
+Just use the code MAR2019 at checkout to get any of my courses for just $10.99.
+Be sure to checkout my best selling course Apache Maven: Beginner to Guru. As an enterprise Java developer, Maven is a must have skill. I personally use Maven every day.
+There is a reason Maven has ~70% of the market. It just works!
+Don't wait.
+This $10.99 sale will end on Friday!
+John Thompson,
+Become a Spring Framework GuruSpring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,000 over Guru's in an Slack community exclusive to this course! More than 2,700 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+What's Spring Cloud Contract?
+
+ Recently, I interviewed Marcin Grzejszczak, the project lead on the Spring Cloud Contract project.
+Spring Cloud Contract is a testing framework which supports consumer driven contracts.
+What are consumer driven contracts and why do you care? Checkout the interview!
+If you follow my blog, you already know I'm a fan of Spring Cloud Contract.
+Spring Cloud Contract is a tool I've been using a lot at my day job. We've been busy implementing contracts for all of our public facing APIs. And starting to use it on our internal APIs too.
+In the interview we cover what consumer driven contracts are, the history of Spring Cloud Contact, our experiences using it, and also talk about Marcin's new course on Spring Cloud Contract.
+I hope you enjoy the chat I had with Marcin!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+
+https://www.youtube.com/watch?v=KH2CV1u8y94&feature=youtu.be
+
+April Course Sale!
+
+ Hola Gurus!
+I know many people around the world will be taking some time off for the Easter holiday.
+Which makes for a perfect time to learn some new skills!
+I am having an April course sale.
+Today through Friday you can get any of my Udemy courses for just $10.99.
+Are you ready to take a deep dive into testing?
+Stomp out bugs with my best selling Testing Spring Boot course!
+
+Get Testing Spring Boot: Beginner to Guru or any of my other Udemy courses (below) using the coupon code APRIL_2019 for just $10.99.
+Don't wait - this coupon will expire on Friday!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,200 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=APRIL_2019
+https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=APRIL_2019
+https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=APRIL_2019
+
+How's your Maven Skills? 🛠
+
+Just a quick reminder that my April course sale continues through this Friday.
+Apache Maven is a build tool I use almost every day.
+There is a reason 70% of companies use Apache Maven as their preferred build tool.
+It just works.
+If you wish to master Apache Maven, checkout my Best Selling Udemy course, Apache Maven: Beginner to Guru.
+With 180 lectures, and 15 hrs of content - this is the most comprehensive course you will find on Maven.
+
+
+You can get your access to Apache Maven: Beginner to Guru today for just $10.99.
+Or enroll in any of my other courses for just $10.99. (see links below!)
+Just use the code APRIL_2019 at checkout.
+Don't wait!
+This sale ends Friday!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,200 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+🚨April Course Sale Ending!🚨
+
+ Hey - Just a quick reminder my April Course Sale ends today.
+Just use the coupon code APRIL_2019 to enroll in any of my courses for just $10.99.
+Don't wait - this coupon will expire at midnight PDT!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,200 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+What is Ultimate Tech Career Toolbox?
+
+ Hola Gurus!
+The Ultimate Tech Career Toolbox is a course bundle with 33 different tech courses!
+Laurence Bradford (who is awesome!) from Learn to Code with me has reached out to over 20 different instructors to bring together this one time course bundle.
+She asked me to include my flagship course Spring Framework 5: Beginner to Guru into this course bundle.
+Take a look at what is included in the Ultimate Tech Career Toolbox!
+1.	(VALUED AT $84) Learn Enough Developer Fundamentals, created by Michael Hartl. With 3 different tutorials inside, you’ll learn enough command line, text editor, and Git to be dangerous.
+2.	(VALUED AT $197) Freelance Developer Jumpstart, created by Hahna Kane Latonick. Turn your skills into cash and land your first freelance client in 90 days.
+3.	(VALUED AT $368) Learn JavaScript Beginners Bundle, created by Laurence Svekis. 3 different courses will help you master the core concepts of JavaScript to fast-track yourself as a web developer.
+4.	(VALUED AT $149) Mastering React, created by Mosh Hamedani. Expand your career options and build fast, dynamic apps by going from beginner to expert React developer.
+5.	(VALUED AT $99) Find Your Fit, created by Jeremy Schifeling. Transition into tech by finding out what tech-adjacent role (marketing, project management, BizOps) could be a good fit for you.
+6.	(VALUED AT $599) Build Real World Full Stack Mobile Apps in Java, created by Shai Almog. Through 2 courses, recreate extremely successful apps including Facebook, Uber, and WhatsApp, and make them cross-platform with Codename One.
+7.	(VALUED AT $200) Certified Web Developer Program, created by Mark Lassoff. Start with basic coding like HTML and CSS and work your way up to more complex languages like JavaScript and PHP (and have fun doing it!).
+8.	(VALUED AT $67) The Advanced Beginner Challenge: Learn JavaScript, Ruby, Python, and More via 30-Day Challenges, created by Dain Miller. Learn programming languages faster than you think is possible—six languages in six 30-day stints (and the system that makes it possible).
+9.	(VALUED AT $200) Spring Framework 5: Beginner to Guru, created by John Thompson. Fill the growing demand for Spring Framework developers and level up your programming career.
+10.	(VALUED AT $195) How to Get a Job in IoT Product Management, created by Daniel Elizalde. The Internet of Things is exploding. This course is for product managers or other professionals who want to get on the IoT train and find a job.
+11.	(VALUED AT $30) Grumpy Testing Bundle, created by Chris Hartjes. Get not one, but three of PHP’s best-selling testing books teaching you how to write effective tests for your PHP code.
+12.	(VALUED AT $89) Create Awesome Vue.js Apps With Nuxt.js, created by Erik Hanchett. Build beautiful interactive applications with this fast, easy-to-use JavaScript framework.
+13.	(VALUED AT $258) Client Onboarding Bundle, created by Erin Flynn. Streamline your clients’ experience (and save yourself time as a freelancer) with your own onboarding packet. 4 products included: an Ebook, two workshops, and a proposal template.
+14.	(VALUED AT $95) How to Build Tinder with React Native & Firebase, created by Tim Moreton. Start with a blank product and end up with your own version of Tinder when you’re done with the course.
+15.	(VALUED AT $399) Authority SEO, created by Chris Lee. Learn how to build and grow a high-traffic blog thanks to SEO strategies like keywords, backlinks, and content marketing.
+16.	(VALUED AT $120) The Serverless Framework with Node.js & AWS, created by Loren Stewart. Serverless frameworks save companies money, so they’re understandably popular—build and deploy your own in this course.
+17.	(VALUED AT $67) Production Ready React Native, created by Spencer Carli. Impress users with cross-platform apps and learn tools and processes to improve your developer skills.
+18.	(VALUED AT $35) A Single-Page App with Vue.js and Rails, created by Mike & Nicole Clark. Design a single-page app where the frontend and backend work in harmony.
+19.	(VALUED AT $650) Job Ready Programmer: Master Java, SQL, OOP, Data Structures & Algorithms and More, created by Imtiaz Ahmad. Want to become a data analyst or software developer? Choose either track (or both!)—there are 12 courses in total to get you job-ready!
+20.	(VALUED AT $99) The Complete Freelancing Bundle, created by Kyle Prinsloo. Kick your side-income skills up a notch. Master freelancing fundamentals, market yourself effectively, and more.
+21.	(VALUED AT $299) Introduction to Android App Development, created by Gary Sims. No coding experience, no problem. Get ready to build your own Android apps, with dedicated email support from Gary. Plus, you get a 2nd course (Introduction to Java) on the house!
+The value of all these courses is over $4,300!
+Tomorrow watch for an email from me for your access and CRAZY savings on this course bundle!
+John Thompson,
+Become a Spring Framework Guru!
+
+
+👀Save $4,000+ on 33 different coding courses - Ultimate Tech Career Toolbox
+
+ Hi Mustafa,
+I'm happy to announce I'm teaming up with Laurence Bradford from Learn to Code With Me, to offer you a course bundle called the Ultimate Tech Career Toolbox.
+The Ultimate Tech Career Toolbox comes jam-packed with 33 different tech courses and products. This bundle is valued at over $4299… BUT it’s being sold for just $239. That’s an astonishing 94% in savings.
+And if you act fast, you can get special early bird pricing on this bundle for just $199.
+Now, until 11:59 pm Eastern Time on May 1st 2019, you can get your access to all 33 courses for just $199.
+Here is everything you’ll get inside the Ultimate Tech Career Toolbox…
+1.	(VALUED AT $84) Learn Enough Developer Fundamentals, created by Michael Hartl. With 3 different tutorials inside, you’ll learn enough command line, text editor, and Git to be dangerous.
+2.	(VALUED AT $197) Freelance Developer Jumpstart, created by Hahna Kane Latonick. Turn your skills into cash and land your first freelance client in 90 days.
+3.	(VALUED AT $368) Learn JavaScript Beginners Bundle, created by Laurence Svekis. 3 different courses will help you master the core concepts of JavaScript to fast-track yourself as a web developer.
+4.	(VALUED AT $149) Mastering React, created by Mosh Hamedani. Expand your career options and build fast, dynamic apps by going from beginner to expert React developer.
+5.	(VALUED AT $99) Find Your Fit, created by Jeremy Schifeling. Transition into tech by finding out what tech-adjacent role (marketing, project management, BizOps) could be a good fit for you.
+6.	(VALUED AT $599) Build Real World Full Stack Mobile Apps in Java, created by Shai Almog. Through 2 courses, recreate extremely successful apps including Facebook, Uber, and WhatsApp, and make them cross-platform with Codename One.
+7.	(VALUED AT $200) Certified Web Developer Program, created by Mark Lassoff. Start with basic coding like HTML and CSS and work your way up to more complex languages like JavaScript and PHP (and have fun doing it!).
+8.	(VALUED AT $67) The Advanced Beginner Challenge: Learn JavaScript, Ruby, Python, and More via 30-Day Challenges, created by Dain Miller. Learn programming languages faster than you think is possible—six languages in six 30-day stints (and the system that makes it possible).
+9.	(VALUED AT $200) Spring Framework 5: Beginner to Guru, created by John Thompson. Fill the growing demand for Spring Framework developers and level up your programming career.
+10.	(VALUED AT $195) How to Get a Job in IoT Product Management, created by Daniel Elizalde. The Internet of Things is exploding. This course is for product managers or other professionals who want to get on the IoT train and find a job.
+11.	(VALUED AT $30) Grumpy Testing Bundle, created by Chris Hartjes. Get not one, but three of PHP’s best-selling testing books teaching you how to write effective tests for your PHP code.
+12.	(VALUED AT $89) Create Awesome Vue.js Apps With Nuxt.js, created by Erik Hanchett. Build beautiful interactive applications with this fast, easy-to-use JavaScript framework.
+13.	(VALUED AT $258) Client Onboarding Bundle, created by Erin Flynn. Streamline your clients’ experience (and save yourself time as a freelancer) with your own onboarding packet. 4 products included: an Ebook, two workshops, and a proposal template.
+14.	(VALUED AT $95) How to Build Tinder with React Native & Firebase, created by Tim Moreton. Start with a blank product and end up with your own version of Tinder when you’re done with the course.
+15.	(VALUED AT $399) Authority SEO, created by Chris Lee. Learn how to build and grow a high-traffic blog thanks to SEO strategies like keywords, backlinks, and content marketing.
+16.	(VALUED AT $120) The Serverless Framework with Node.js & AWS, created by Loren Stewart. Serverless frameworks save companies money, so they’re understandably popular—build and deploy your own in this course.
+17.	(VALUED AT $67) Production Ready React Native, created by Spencer Carli. Impress users with cross-platform apps and learn tools and processes to improve your developer skills.
+18.	(VALUED AT $35) A Single-Page App with Vue.js and Rails, created by Mike & Nicole Clark. Design a single-page app where the frontend and backend work in harmony.
+19.	(VALUED AT $650) Job Ready Programmer: Master Java, SQL, OOP, Data Structures & Algorithms and More, created by Imtiaz Ahmad. Want to become a data analyst or software developer? Choose either track (or both!)—there are 12 courses in total to get you job-ready!
+20.	(VALUED AT $99) The Complete Freelancing Bundle, created by Kyle Prinsloo. Kick your side-income skills up a notch. Master freelancing fundamentals, market yourself effectively, and more.
+21.	(VALUED AT $299) Introduction to Android App Development, created by Gary Sims. No coding experience, no problem. Get ready to build your own Android apps, with dedicated email support from Gary. Plus, you get a 2nd course (Introduction to Java) on the house!
+Even better? For the first 48 hours, you can take advantage of special Early Bird Pricingwhere you’ll save even more. Rather than paying $239, you’ll get all these products for just $199.
+Click here to get Early Bird Pricing before it expires at 11:59 pm May 1st, 2019!
+FAQs
+Q: How long do I have to decide? This sale is so spectacular that it is only happening for 5 days. You have until Saturday May 4 at 11:59pm Eastern Time to buy the Ultimate Tech Career Toolbox. (And you get the early bird price if you buy before midnight on Wednesday!)
+Q: How will I receive all 33 of these products? After purchasing the bundle, you’ll have login access to a membership area where we will give instructions on how to redeem each product.
+Q: Do I get access to everything at once? Yes -- after purchasing the bundle, you’ll get access to all 33 products right away.
+Q: How much time will it take? Every product inside the bundle is different. And there is no requirement that you have to go through them all—you can pick and choose the ones you want to prioritize. It really depends on you! Most of the courses are designed to take 2-6 hours, though.
+Q: How long will I be able to access the products for? The product access codes you receive through the Ultimate Tech Career Toolbox will be redeemable for at least 6 months. Make sure to redeem them as soon as possible. After you redeem the courses/products using the codes you’re given, you will have lifetime access to them! There might be some courses you want to take right away, and you can redeem the others as a gift to your future self.
+Q: Can I purchase this later? No -- when the sale is over, it’s over. This is such a unique and valuable offer that unfortunately it can’t be kept open forever.
+Q: Can I just buy a portion of the bundle or one course? While you can buy any of the contributors products individually from the creator’s website, the deal is just so good for this -- why would you want to!?
+Q: Is there a payment plan? Yes! You can make 3 monthly payments of $99 instead of the full price up front.
+Q: What if I try it, and I decide it isn't right for me? We want you to be happy with your purchase. That’s why there is a 100% money-back guarantee for 30 days after purchase. After purchasing the bundle, the member area contains details on how to contact Learn to Code With Me’s support.
+Q: When will this be available again? Never! The 2019 Ultimate Tech Career Toolbox is on sale for this week only.
+This is a special one time offer available until Saturday May 4th.
+Once it's over, it's over.
+This bundle will not be offered again!
+Click here to get your access to 33 different tech courses!
+John Thompson,
+Become a Spring Framework Guru
+PS - You can check out this bundle with zero risk. If you are unhappy for any reason there is a 30 day money back guarantee.
+
+https://go.learntocodewith.me/p/tech-toolbox-2019/?affcode=58750_ccgsb1yd
+
+Woops! Updated Link for The Ultimate Tech Career Toolbox
+
+Well this is embarrassing!
+A few hours ago I sent you an email about The Ultimate Tech Career Toolbox and how you could get special early bird pricing for just $199.
+And I sent you the wrong link.
+Please use this link instead.
+Yep, as it turns out I can't follow simple instructions...
+
+My mistake.
+Sorry in advance for the additional email!
+John Thompson
+Become a Spring Framework Guru
+
+https://learntocodewith.me/toolbox2019
+
+Early Bird Pricing Ending - Ultimate Tech Career Toolbox
+
+ Hey Mustafa,
+Quick reminder.
+You only have about 10 hrs left to take advantage of special Early Bird Pricing on the Ultimate Tech Career Toolbox bundle for just $199.
+Early Bird Pricing will end at 11:59 pm Eastern Time on May 1st 2019. Pricing will increase to $239 after this deadline.
+Here is everything you’ll get inside the Ultimate Tech Career Toolbox…
+1.	(VALUED AT $84) Learn Enough Developer Fundamentals, created by Michael Hartl. With 3 different tutorials inside, you’ll learn enough command line, text editor, and Git to be dangerous.
+2.	(VALUED AT $197) Freelance Developer Jumpstart, created by Hahna Kane Latonick. Turn your skills into cash and land your first freelance client in 90 days.
+3.	(VALUED AT $368) Learn JavaScript Beginners Bundle, created by Laurence Svekis. 3 different courses will help you master the core concepts of JavaScript to fast-track yourself as a web developer.
+4.	(VALUED AT $149) Mastering React, created by Mosh Hamedani. Expand your career options and build fast, dynamic apps by going from beginner to expert React developer.
+5.	(VALUED AT $99) Find Your Fit, created by Jeremy Schifeling. Transition into tech by finding out what tech-adjacent role (marketing, project management, BizOps) could be a good fit for you.
+6.	(VALUED AT $599) Build Real World Full Stack Mobile Apps in Java, created by Shai Almog. Through 2 courses, recreate extremely successful apps including Facebook, Uber, and WhatsApp, and make them cross-platform with Codename One.
+7.	(VALUED AT $200) Certified Web Developer Program, created by Mark Lassoff. Start with basic coding like HTML and CSS and work your way up to more complex languages like JavaScript and PHP (and have fun doing it!).
+8.	(VALUED AT $67) The Advanced Beginner Challenge: Learn JavaScript, Ruby, Python, and More via 30-Day Challenges, created by Dain Miller. Learn programming languages faster than you think is possible—six languages in six 30-day stints (and the system that makes it possible).
+9.	(VALUED AT $200) Spring Framework 5: Beginner to Guru, created by John Thompson. Fill the growing demand for Spring Framework developers and level up your programming career.
+10.	(VALUED AT $195) How to Get a Job in IoT Product Management, created by Daniel Elizalde. The Internet of Things is exploding. This course is for product managers or other professionals who want to get on the IoT train and find a job.
+11.	(VALUED AT $30) Grumpy Testing Bundle, created by Chris Hartjes. Get not one, but three of PHP’s best-selling testing books teaching you how to write effective tests for your PHP code.
+12.	(VALUED AT $89) Create Awesome Vue.js Apps With Nuxt.js, created by Erik Hanchett. Build beautiful interactive applications with this fast, easy-to-use JavaScript framework.
+13.	(VALUED AT $258) Client Onboarding Bundle, created by Erin Flynn. Streamline your clients’ experience (and save yourself time as a freelancer) with your own onboarding packet. 4 products included: an Ebook, two workshops, and a proposal template.
+14.	(VALUED AT $95) How to Build Tinder with React Native & Firebase, created by Tim Moreton. Start with a blank product and end up with your own version of Tinder when you’re done with the course.
+15.	(VALUED AT $399) Authority SEO, created by Chris Lee. Learn how to build and grow a high-traffic blog thanks to SEO strategies like keywords, backlinks, and content marketing.
+16.	(VALUED AT $120) The Serverless Framework with Node.js & AWS, created by Loren Stewart. Serverless frameworks save companies money, so they’re understandably popular—build and deploy your own in this course.
+17.	(VALUED AT $67) Production Ready React Native, created by Spencer Carli. Impress users with cross-platform apps and learn tools and processes to improve your developer skills.
+18.	(VALUED AT $35) A Single-Page App with Vue.js and Rails, created by Mike & Nicole Clark. Design a single-page app where the frontend and backend work in harmony.
+19.	(VALUED AT $650) Job Ready Programmer: Master Java, SQL, OOP, Data Structures & Algorithms and More, created by Imtiaz Ahmad. Want to become a data analyst or software developer? Choose either track (or both!)—there are 12 courses in total to get you job-ready!
+20.	(VALUED AT $99) The Complete Freelancing Bundle, created by Kyle Prinsloo. Kick your side-income skills up a notch. Master freelancing fundamentals, market yourself effectively, and more.
+21.	(VALUED AT $299) Introduction to Android App Development, created by Gary Sims. No coding experience, no problem. Get ready to build your own Android apps, with dedicated email support from Gary. Plus, you get a 2nd course (Introduction to Java) on the house!
+Click here to get Early Bird Pricing before it expires at 11:59 pm May 1st, 2019!
+FAQs
+Q: How long do I have to decide? This sale is so spectacular that it is only happening for 5 days. You have until Saturday May 4 at 11:59pm Eastern Time to buy the Ultimate Tech Career Toolbox. (And you get the early bird price if you buy before midnight on Wednesday!)
+Q: How will I receive all 33 of these products? After purchasing the bundle, you’ll have login access to a membership area where we will give instructions on how to redeem each product.
+Q: Do I get access to everything at once? Yes -- after purchasing the bundle, you’ll get access to all 33 products right away.
+Q: How much time will it take? Every product inside the bundle is different. And there is no requirement that you have to go through them all—you can pick and choose the ones you want to prioritize. It really depends on you! Most of the courses are designed to take 2-6 hours, though.
+Q: How long will I be able to access the products for? The product access codes you receive through the Ultimate Tech Career Toolbox will be redeemable for at least 6 months. Make sure to redeem them as soon as possible. After you redeem the courses/products using the codes you’re given, you will have lifetime access to them! There might be some courses you want to take right away, and you can redeem the others as a gift to your future self.
+Q: Can I purchase this later? No -- when the sale is over, it’s over. This is such a unique and valuable offer that unfortunately it can’t be kept open forever.
+Q: Can I just buy a portion of the bundle or one course? While you can buy any of the contributors products individually from the creator’s website, the deal is just so good for this -- why would you want to!?
+Q: Is there a payment plan? Yes! You can make 3 monthly payments of $99 instead of the full price up front.
+Q: What if I try it, and I decide it isn't right for me? We want you to be happy with your purchase. That’s why there is a 100% money-back guarantee for 30 days after purchase. After purchasing the bundle, the member area contains details on how to contact Learn to Code With Me’s support.
+Q: When will this be available again? Never! The 2019 Ultimate Tech Career Toolbox is on sale for this week only.
+This is a special one time offer available until Saturday May 4th.
+Once it's over, it's over.
+This bundle will not be offered again!
+Click here to get your access to 33 different tech courses!
+John Thompson,
+Become a Spring Framework Guru
+PS - You can check out this bundle with zero risk. If you are unhappy for any reason there is a 30 day money back guarantee.
+
+
+Last Chance! - Ultimate Tech Career Toolbox
+
+ Hola Mustafa,
+Quick reminder.
+You only have about 12 hrs left to take advantage of the one time Ultimate Tech Career Toolbox bundle for just $239.
+Together, all the products are worth $4,299. That’s 94% in savings. It doesn’t get much better than this. 
+Imagine what it will feel like when you sit down for that job interview, or get your first freelance client. This bundle can help you reach goals like that faster, or even help you discover new goals and passions you didn’t know about before.
+Even better?
+There is no risk because the Ultimate Tech Career Toolbox comes with a 30-day money back guarantee. If you’re unhappy with your purchase for whatever reason, you can get 100% of your money back.
+Here is everything you’ll get inside the Ultimate Tech Career Toolbox…
+1.	(VALUED AT $84) Learn Enough Developer Fundamentals, created by Michael Hartl. With 3 different tutorials inside, you’ll learn enough command line, text editor, and Git to be dangerous.
+2.	(VALUED AT $197) Freelance Developer Jumpstart, created by Hahna Kane Latonick. Turn your skills into cash and land your first freelance client in 90 days.
+3.	(VALUED AT $368) Learn JavaScript Beginners Bundle, created by Laurence Svekis. 3 different courses will help you master the core concepts of JavaScript to fast-track yourself as a web developer.
+4.	(VALUED AT $149) Mastering React, created by Mosh Hamedani. Expand your career options and build fast, dynamic apps by going from beginner to expert React developer.
+5.	(VALUED AT $99) Find Your Fit, created by Jeremy Schifeling. Transition into tech by finding out what tech-adjacent role (marketing, project management, BizOps) could be a good fit for you.
+6.	(VALUED AT $599) Build Real World Full Stack Mobile Apps in Java, created by Shai Almog. Through 2 courses, recreate extremely successful apps including Facebook, Uber, and WhatsApp, and make them cross-platform with Codename One.
+7.	(VALUED AT $200) Certified Web Developer Program, created by Mark Lassoff. Start with basic coding like HTML and CSS and work your way up to more complex languages like JavaScript and PHP (and have fun doing it!).
+8.	(VALUED AT $67) The Advanced Beginner Challenge: Learn JavaScript, Ruby, Python, and More via 30-Day Challenges, created by Dain Miller. Learn programming languages faster than you think is possible—six languages in six 30-day stints (and the system that makes it possible).
+9.	(VALUED AT $200) Spring Framework 5: Beginner to Guru, created by John Thompson. Fill the growing demand for Spring Framework developers and level up your programming career.
+10.	(VALUED AT $195) How to Get a Job in IoT Product Management, created by Daniel Elizalde. The Internet of Things is exploding. This course is for product managers or other professionals who want to get on the IoT train and find a job.
+11.	(VALUED AT $30) Grumpy Testing Bundle, created by Chris Hartjes. Get not one, but three of PHP’s best-selling testing books teaching you how to write effective tests for your PHP code.
+12.	(VALUED AT $89) Create Awesome Vue.js Apps With Nuxt.js, created by Erik Hanchett. Build beautiful interactive applications with this fast, easy-to-use JavaScript framework.
+13.	(VALUED AT $258) Client Onboarding Bundle, created by Erin Flynn. Streamline your clients’ experience (and save yourself time as a freelancer) with your own onboarding packet. 4 products included: an Ebook, two workshops, and a proposal template.
+14.	(VALUED AT $95) How to Build Tinder with React Native & Firebase, created by Tim Moreton. Start with a blank product and end up with your own version of Tinder when you’re done with the course.
+15.	(VALUED AT $399) Authority SEO, created by Chris Lee. Learn how to build and grow a high-traffic blog thanks to SEO strategies like keywords, backlinks, and content marketing.
+16.	(VALUED AT $120) The Serverless Framework with Node.js & AWS, created by Loren Stewart. Serverless frameworks save companies money, so they’re understandably popular—build and deploy your own in this course.
+17.	(VALUED AT $67) Production Ready React Native, created by Spencer Carli. Impress users with cross-platform apps and learn tools and processes to improve your developer skills.
+18.	(VALUED AT $35) A Single-Page App with Vue.js and Rails, created by Mike & Nicole Clark. Design a single-page app where the frontend and backend work in harmony.
+19.	(VALUED AT $650) Job Ready Programmer: Master Java, SQL, OOP, Data Structures & Algorithms and More, created by Imtiaz Ahmad. Want to become a data analyst or software developer? Choose either track (or both!)—there are 12 courses in total to get you job-ready!
+20.	(VALUED AT $99) The Complete Freelancing Bundle, created by Kyle Prinsloo. Kick your side-income skills up a notch. Master freelancing fundamentals, market yourself effectively, and more.
+21.	(VALUED AT $299) Introduction to Android App Development, created by Gary Sims. No coding experience, no problem. Get ready to build your own Android apps, with dedicated email support from Gary. Plus, you get a 2nd course (Introduction to Java) on the house!
+FAQs
+Q: How long do I have to decide? This sale is so spectacular that it is only happening for 5 days. You have until Saturday May 4 at 11:59pm Eastern Time to buy the Ultimate Tech Career Toolbox.
+Q: How will I receive all 33 of these products? After purchasing the bundle, you’ll have login access to a membership area where we will give instructions on how to redeem each product.
+Q: Do I get access to everything at once? Yes -- after purchasing the bundle, you’ll get access to all 33 products right away.
+Q: How much time will it take? Every product inside the bundle is different. And there is no requirement that you have to go through them all—you can pick and choose the ones you want to prioritize. It really depends on you! Most of the courses are designed to take 2-6 hours, though.
+Q: How long will I be able to access the products for? The product access codes you receive through the Ultimate Tech Career Toolbox will be redeemable for at least 6 months. Make sure to redeem them as soon as possible. After you redeem the courses/products using the codes you’re given, you will have lifetime access to them! There might be some courses you want to take right away, and you can redeem the others as a gift to your future self.
+Q: Can I purchase this later? No -- when the sale is over, it’s over. This is such a unique and valuable offer that unfortunately it can’t be kept open forever.
+Q: Can I just buy a portion of the bundle or one course? While you can buy any of the contributors products individually from the creator’s website, the deal is just so good for this -- why would you want to!?
+Q: Is there a payment plan? Yes! You can make 3 monthly payments of $99 instead of the full price up front.
+Q: What if I try it, and I decide it isn't right for me? We want you to be happy with your purchase. That’s why there is a 100% money-back guarantee for 30 days after purchase. After purchasing the bundle, the member area contains details on how to contact Learn to Code With Me’s support.
+Q: When will this be available again? Never! The 2019 Ultimate Tech Career Toolbox is on sale for this week only.
+This bundle will not be offered again!
+Click here to get your access to 33 different tech courses!
+John Thompson,
+Become a Spring Framework Guru
+PS - You can check out this bundle with zero risk. If you are unhappy for any reason there is a 30 day money back guarantee.
+
+May Course Sale!
+ Hola Gurus!
+I'm happy to announce I'm having a May course sale on all of my courses.
+Today though Saturday get any of my courses for just $10.99.
+Want to learn about deploying your Spring Boot applications on Amazon AWS?
+Checkout my Spring Framework DevOps course on AWS.
+
+A lot of great content in this course. See how to setup Jenkins and Artifactory to build and deploy your Java assets.
+Just use the coupon code MAY_2019 to get any of my courses for just $10.99.
+Don't wait, this coupon code will expire this Saturday!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,200 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+Learn JUnit 5!
+
+ While JUnit 4 still has a huge following, companies are migrating to JUnit 5 more and more.
+If you'd like to take a deep dive on the features of JUnit 5, checkout my Testing Spring Boot: Beginner to Guru course.
+JUnit 5 is used extensively in this course, but the course is much more than just JUnit 5.
+You'll get to see how Test Driven Development (TDD) is used to evolve your software.
+And learn in detail the features of Mockito.
+And then you'll see how to leverage TDD, JUnit 5, and Mockito with the testing features of the Spring Framework to test your Spring Framework applications.
+
+Testing Spring Boot: Beginner to Guru has quickly become one of my best selling courses.
+Today through Saturday, you get your access to Testing Spring Boot: Beginner to Guru or any of my other Udemy courses for just $10.99.
+Just use the coupon code MAY_2019 to get any of my courses for just $10.99.
+Don't wait, this coupon code will expire this Saturday!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,200 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+May Course Sale Ends Today
+
+ 
+Hey, quick reminder my May course sale on all of my Udemy courses ends today at Midnight PDT.
+Just use the coupon code MAY_2019 to get any of my courses for just $10.99.
+Don't wait, this coupon code expires today!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 5,200 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+Teach Yourself Programming in 10 years
+
+I recently had a student ask my how long it took before I considered myself a senior developer.
+I sent them a link to this famous post by Peter Norvig about teaching yourself programming in 10 years.
+Who? Norvig is the director of research at Google and has a Ph.D. in computer science from Berkly. In short, very smart guy.
+10 years? Really?
+What about the books that say I can learn Java in 21 days?
+Yes, 10 years.
+Sorry, there are no short cuts.
+Coding is a skill which develops over time.
+Like working with wood.
+Think about carpenters.
+I enjoy working with wood. I can cut wood, and build numerous things out of wood.
+Need a wall - no problem!
+Need kitchen cabinets? You might want to call someone else!
+I have huge respect for carpenters. They can create amazing things from wood. With skills that took many years to develop.
+The same analogy can be used with software developers.
+In my early days, I dabbled with PHP and Visual Basic.
+I assure you the code I wrote was AWFUL!
+But I've grown and learned a lot since then. As all developers do.
+Anyhoo - either way, if you're a new developer, or have a programming career well under way. Teach Yourself Programming in 10 years is a great read.
+Enjoy,
+John Thompson
+Become a Spring Framework Guru!
+
+
+June Course Sale!
+
+Hola Gurus!
+I'm happy to announce I'm having a June course sale on all of my courses.
+Today though Saturday get any of my courses for just $10.99.
+Apache Maven is the most popular build tool used in enterprise application development.
+I've had experienced Java developers take my Apache Maven: Beginner to Guru course and comment about all the tips and tricks they picked up in the course.
+Just use the coupon code JUNE_2019 to get any of my courses for just $10.99.
+Don't wait, this coupon code will expire this Saturday!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 6,000 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+
+Spring Boot Microservices Course now Available!
+
+Hola Gurus!
+You guys spoke, and I listened!
+Back in January I sent out a survey asking you what courses you would like to see in 2019.
+I thought Spring Security was going to win.
+But I was wrong! Spring Boot Microservices came in at a solid #1.
+Thus, all year long I've been working on a Spring Boot Microservices course!
+
+Today through the end of July, you can get my latest course Spring Boot Microservices with Spring Cloud Beginner to Guru for just $9.99.
+If you have taken my Spring Framework 5: Beginner to Guru course, this is an ideal next course.
+My Spring Boot Microservices course is targeted for intermediate students. You should be comfortable with Spring, Docker, and MySQL.
+I know a lot of organizations are starting to adopt using microservices.
+One very fun exercise you will experience in the course is taking a traditional monolithic application and then breaking it into microservices.
+Through this, you get to see some of the challenges you will encounter when when moving to a microservice based architecture.
+Please note: this is a MVP Release. There are almost 18 hours of content available right now.
+I'm just completing some content about using Sagas with Spring Boot Microservices and Spring State Machine. And then I will be getting into the Spring Cloud content, starting with Spring Cloud Config.
+And yes, once I wrap up this course - I'm starting work on a Spring Security course - which was clearly #2 on my survey.
+Join Spring Boot Microservices with Spring Cloud today for just $9.99!
+As part of this course launch, you can get any of my other courses for just $9.99 too! Just use the code JULY_LAUNCH at checkout!
+Don't forget - this offer will end on July 31st!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 6,000 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+What is the term MVP in a startup context?
+
+MVP is a commonly used term.
+If you're into sports, you may think of MVP as an acronym for Most Value Player.
+Not in a startup context.
+For startups, MVP stands for Minimum Viable Product.
+MVP is a concept that helps you focus on what you need to go to market.
+What are the minimum things you need for your customers?
+Think about Uber for example.
+I've been a fan of Uber for a long time.
+Years ago, Uber was pretty simple. There was no surge pricing. No ride sharing.
+Many features Uber has today, where missing a couple years ago.
+Uber got their app out the door, got customers using it, then improved it.
+Which is what I've done with my Spring Boot Microservices course.
+Yesterday, I announced the MVP release of Spring Boot Microservices with Spring Cloud Beginner to Guru.
+The response has been amazing!
+This has been my best course launch EVER.
+Over 650 Gurus joined the course!
+For those who joined the course, THANK YOU!
+For those who have not - what are you waiting for!?!? The $9.99 price will expire tomorrow!
+With almost 18 hrs of content, this is the most comprehensive course you will find on Spring Boot Microservices.
+And I'm just starting to produce the Spring Cloud content! Much more to come!
+You can get this course, or any of my other courses for just $9.99 too!
+Just use the code JULY_LAUNCH at checkout!
+Don't forget - this offer will end on July 31st!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+PS - You can try the course risk free with Udemy's 30 Day Money back Guarantee!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 6,000 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Brand new course to help you master building microservices with Spring Boot and Spring Cloud.
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+Quick Reminder - Just 14 hrs Left
+Hey,
+Just a quick reminder that you have about 14 hrs left to get Spring Boot Microservices with Spring Cloud Beginner to Guru for just $9.99.
+This continues to be my best course launch EVER.
+In less than 72 hours, over 1,000 Gurus have joined the course!
+This course, already has 18 hrs of content - making it a very comprehensive course on Spring Boot Microservices.
+And I'm blocking time this weekend to record more.
+Did someone ask for Spring State Machine and Sagas?
+You can get this course, or any of my other courses for just $9.99.
+Just use the code JULY_LAUNCH at checkout!
+This coupon will expire today at midnight Pacific (US) time.
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+PS - You can try the course risk free with Udemy's 30 Day Money back Guarantee!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 6,000 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Brand new course to help you master building microservices with Spring Boot and Spring Cloud.
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS!
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+Hola Gurus!
+Can you believe it's back to school time already?
+Maybe you're going back to school yourself, or maybe you are a parent who is happy to see your children return to school.
+Either way, great time to start a new course!
+Today through Saturday get any of my courses for just $9.99.
+One course I would like to highlight my Apache Maven: Beginner to Guru course.
+Apache Maven is the most popular Java build tool, and my course is packed with pragmatic tips and tricks for you to get the most out of Maven!
+
+Just use the coupon code AUG_2019 to get any of my courses for just $9.99.
+Don't wait, this coupon code will expire this Saturday!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 6,700 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Highest Rated Spring Boot Course on Udemy! Learn how to master developing Microservices with Spring Boot!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS! Learn about CI with Jenkins.
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+The Happiness Formula
+
+ Many of you may know Scott Adams as the creator of the Dilbert comic strips (which are always great). Scott also has some really interesting books and a podcast.
+I listened to his latest episode during my morning walk today.
+Scott goes through a number of interesting tips, like creating systems - which is something I'm personally trying to get better at.
+One of Scott's other tips was to learn something new everyday.
+I enjoy learning every day.
+Sometimes, its in the course of my job as a software engineer.
+Sometimes, its just out of personal interest.
+Sometimes, I learn while developing my courses.
+I learned a ton in preparing for my latest course on Spring Boot Microservices.
+Which seems to show, since your ratings have made this the Highest Rated Spring Boot course on Udemy!
+I'll be learning more this weekend as I develop the Spring Cloud content for this course!
+
+If you wish to learn something new every day, my Back to School course continues through this Saturday!
+Just use the coupon code AUG_2019 to get any of my courses for just $9.99.
+Don't wait, this coupon code will expire this Saturday!
+Enroll in my courses and learn something new!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 6,700 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Highest Rated Spring Boot Course on Udemy! Learn how to master developing Microservices with Spring Boot!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the world's most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS! Learn about CI with Jenkins.
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+Quick Reminder - Course Sale Ends in 12 Hours
+ Hey - Just a quick reminder.
+My Back to School Course Sale ends in about 12 hours.
+As developers, Docker is becoming a must have skill. Employers are looking for Docker skills, just as they are for SQL, Maven, and JUnit.
+Checkout my Docker for Java Developers course. This is a Docker course, written by a developer, for other developers.
+Just use the coupon code AUG_2019 to get any of my courses for just $9.99.
+This coupon will expire at Midnight EDT today.
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 6,700 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Highest Rated Spring Boot Course on Udemy! Learn how to master developing Microservices with Spring Boot!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the world's most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS! Learn about CI with Jenkins.
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+Hola Gurus,
+Today through Saturday, I'm having a course sale on all of my great Udemy courses.
+Get any of my courses for just $10.99!
+One skill which employers are looking for more and more is Docker.
+I'm seeing more and more companies adopt Docker.
+And as a Java developer, Docker is becoming a must have skill.
+Docker is not just for production deployments.
+Explore what you can do with Docker in my Docker for Java Developers course!
+
+Just use the code SEPT2019 to get any of my courses for just $10.99.
+This coupon code will expire Saturday, September 28th!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 7,100 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Highest Rated Spring Boot Course on Udemy! Learn how to master developing Microservices with Spring Boot!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the world's most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS! Learn about CI with Jenkins.
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+ Hola Gurus,
+I've received a few questions about which course to take first - Spring Framework 5: Beginner to Guru or Spring Boot Microservices B2G.
+Definitely take the Spring Framework 5 course first. This course is an introductory course to the Spring Framework. It is more broad in scope on all things Spring.
+The Spring Boot Microservices course assumes you already know have skills with the Spring Framework. This is a more advanced course. Its the ideal follow-on course after the Spring Framework 5 course. And it is focused specifically on building mircorservices with Spring Boot.
+This week I've been writing code for the next section of the Spring Boot Microservices course.
+Sagas with Spring State Machine, ActiveMQ Artemis, Project Lombok, MapStruct, WireMock - a lot of cool stuff coming together! I'm having a lot of fun coding this section of the course. This is the type of Spring code I do on a day to day basis with the payments startup I work for.
+Through Saturday, get any of my Udemy courses for just $10.99!
+
+Just use the code SEPT2019 to get any of my courses for just $10.99.
+This coupon code will expire Saturday, September 28th!
+Cheers,
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 7,100 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Highest Rated Spring Boot Course on Udemy! Learn how to master developing Microservices with Spring Boot!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the world's most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS! Learn about CI with Jenkins.
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+
+
+
+Hey - just a quick reminder that my September course sale is ending in about 12 hours.
+Just use the code SEPT2019 to get any of my courses for just $10.99.
+This coupon code will expire Saturday, September 28th - at midnight EDT.
+Thanks!
+John Thompson,
+Become a Spring Framework Guru!
+Spring Framework 5
+Spring Framework 5: Beginner to Guru - Get the most modern and comprehensive course available for the Spring Framework! Join over 7,100 over Guru's in an Slack community exclusive to this course! More than 3,000 students have given this 50.5 hour course a 5 star review!
+Spring Boot Microservices with Spring Cloud Beginner to Guru - Highest Rated Spring Boot Course on Udemy! Learn how to master developing Microservices with Spring Boot!
+Reactive Programming with Spring Framework 5 - Keep your skills razor sharp and take a deep dive into Reactive Programming!
+Testing Spring Boot: Beginner to Guru - Best Selling Course! Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
+SQL
+SQL Beginner to Guru: MySQL Edition - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the world's most popular database!
+DevOps
+Apache Maven: Beginner to Guru - Best Selling Course! Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
+Docker for Java Developers - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
+Spring Framework DevOps on AWS - Learn how to build and deploy Spring applications on Amazon AWS! Learn about CI with Jenkins.
+Ready for Production with Spring Boot Actuator - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+Web Development with Spring Framework
+Angular 4 Java Developers - Learn how to use Angular with Spring Boot. Two flaming hot technologies! This is the only course on Udemy where you can learn how to use JHipster to rapidly build your next application! Also, be sure to checkout the Slack community for this course!
+Mastering Thymeleaf with Spring Boot - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+Spring Framework 4
+Spring Core - Learn the core of Spring Framework 4!
+Spring Core Advanced - Go beyond the basics! Learn about Aspect Oriented Programming, Spring Security, using Spring Events, JMS and more!
+

@@ -1,0 +1,291 @@
+---------------------GUI işlemleri_ İkon_Buton_Checkbox_radioButon_Label
+ImageIcon sınıfını kullanarak resim ikonları oluşturmayı öğrenmek(§12.10).
+JButton sınıfını kullanarak buton oluşturmayı öğrenmek(§12.11).
+JCheckBox sınıfını kullanarak check box oluşturmayı öğrenmek (§12.12).
+JRadioButton sınıfını kullanarak radio butonu oluşturmayı öğrenmek (§12.13).
+JLabel sınıfını kullanarak label oluşturmayı öğrenmek (§12.14).
+//Bu programda resim dosyalarından ikon üretiliyor. Resimler belirtilen klasörde bulunmalı (Bu program için projenin klasöründe bir alt klasör olan resim klasöründe kayıtlı olmalı.)
+import javax.swing.*;
+import java.awt.*;
+
+public class TestImageIcon extends JFrame {
+  private ImageIcon amerika = new ImageIcon("resim/us.gif");
+  private ImageIcon turk = new ImageIcon("resim/trBayrak1.jpg");
+  private ImageIcon fransız = new ImageIcon("resim/fr.gif");
+  private ImageIcon ingiliz = new ImageIcon("resim/uk.gif");
+
+  public TestImageIcon() {
+    setLayout(new GridLayout(1, 4, 5, 5));
+    JLabel etk1=new JLabel(amerika);
+    etk1.setToolTipText("Bu birinci etikettir.");
+    add(etk1);
+    JLabel etk2=new JLabel(turk);
+    etk2.setToolTipText("Bu ikinci etikettir.");
+    add(etk2);
+    JButton b1= new JButton(fransız);
+    b1.setToolTipText("Bu birinci butondur.");
+    add(b1);
+    JButton b2= new JButton(ingiliz);
+    b2.setToolTipText("Bu ikinci butondur.");
+    add(b2);
+    }
+
+  public static void main(String[] args) {
+    TestImageIcon frame = new TestImageIcon();
+    frame.setTitle("TestImageIcon");
+    frame.setSize(500, 125);
+    frame.setLocationRelativeTo(null);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}
+
+---------------------GUI işlemleri_ Button  pressed ve rollover
+import javax.swing.*;
+
+public class TestButtonIcons extends JFrame  {
+  public static void main(String[] args) {
+
+    JFrame frame = new TestButtonIcons();
+    frame.setTitle("ButtonIcons");
+    frame.setSize(200, 100);
+    frame.setLocationRelativeTo(null);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+  public TestButtonIcons() {
+    ImageIcon usIcon = new ImageIcon("resim/amerika.gif");
+    ImageIcon caIcon = new ImageIcon("resim/kanada.gif");
+    ImageIcon ukIcon = new ImageIcon("resim/ingiliz.gif");
+
+    JButton bt = new JButton("bayrak", usIcon);
+    bt.setPressedIcon(caIcon);
+    bt.setRolloverIcon(ukIcon);
+
+    add(bt);
+  }
+}
+
+---------------------Radio Button ve gruplama
+import javax.swing.*;
+import java.awt.*;
+public class TestButton2 extends JFrame  {
+		public TestButton2() {
+			    ImageIcon icon = new ImageIcon("resim/grapes.gif");
+			    JLabel etk= new JLabel(icon);
+
+			    JRadioButton r1 = new JRadioButton("Karpuz");
+			    JRadioButton r2 = new JRadioButton("Erik");
+			    JRadioButton r3 = new JRadioButton("Çilek");
+			    JRadioButton r4 = new JRadioButton("Üzüm");
+
+			    add(etk);
+			    ButtonGroup btg = new ButtonGroup();
+			    btg.add(r1);
+			    btg.add(r2);
+			    btg.add(r3);
+			    btg.add(r4);
+			    add(r1);
+			    add(r2);
+			    add(r3);
+			    add(r4);
+			  }
+	public static void main(String[] args) {
+	    JFrame frame = new TestButton2();
+	    frame.setLayout(new GridLayout(6,1));
+	    frame.setTitle("ButtonIcons");
+	    frame.setSize(400, 400);
+	    frame.setLocationRelativeTo(null);
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	  }
+
+	}
+
+----------- Etiket hizalama
+
+import javax.swing.*;
+public class TestIcon extends JFrame  {
+	public TestIcon() {
+		    ImageIcon icon = new ImageIcon("resim/grapes.gif");
+
+	        // Metinli, ikonlu ve ortaya yatay hizalandırılmış bir etiket oluştur
+		    JLabel etk = new JLabel("Üzüm", icon, SwingConstants.CENTER);
+
+		    //Etiketin metin hizalamasını ve metin-ikon arası boşluğu ayarla
+		    etk.setHorizontalTextPosition(SwingConstants.LEFT);
+		    etk.setVerticalTextPosition(SwingConstants.BOTTOM);
+		    etk.setIconTextGap(5);
+
+		    add(etk);
+		  }
+public static void main(String[] args) {
+    JFrame frame = new TestIcon();
+    frame.setTitle("Buton İkonlar");
+    frame.setSize(200, 200);
+    frame.setLocationRelativeTo(null);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+
+}
+
+--------  TextField kullanımı
+import java.awt.*;
+import javax.swing.*;
+
+public class TestTextField extends JFrame{
+
+	public TestTextField() {
+	    ImageIcon icon = new ImageIcon("resim/grapes.gif");
+
+        // Metinli, ikonlu ve ortaya yatay hizalandırılmış bir etiket oluştur
+	    JLabel etk = new JLabel("Üzüm", icon, SwingConstants.CENTER);
+	    Font f=new Font("Vivaldi",Font.PLAIN, 20);
+	    //Etiketin metin hizalamasını ve metin-ikon arası boşluğu ayarla
+	    etk.setHorizontalTextPosition(SwingConstants.LEFT);
+	    etk.setVerticalTextPosition(SwingConstants.BOTTOM);
+	    etk.setIconTextGap(5);
+
+	   	JTextField t1=new JTextField();// boş bir text alanı oluştur
+		JTextField t2=new JTextField("isim");//Belirtilen metin ile bir text alanı
+		JTextField t3=new JTextField("soyad");
+		t2.setFont(f);
+		t2.setForeground(Color.BLUE);
+		add(t1);
+		add(t2);
+		add(t3);
+	}
+	public static void main(String[] args) {
+	    JFrame frame = new TestTextField();
+	    frame.setTitle("Text Alanlar");
+	    frame.setLayout(new GridLayout(3,1));
+	    frame.setSize(200, 200);
+	    frame.setLocationRelativeTo(null);
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	  }
+
+}
+------- CheckBox
+	import javax.swing.*;
+	import java.awt.*;
+	public class CheckBox1 extends JFrame  {
+		public CheckBox1() {
+			    ImageIcon icon = new ImageIcon("resim/grapes.gif");
+			    JLabel etk= new JLabel(icon);
+
+			    JCheckBox r1 = new JCheckBox("Karpuz");
+			    JCheckBox r2 = new JCheckBox("Meyve");
+			    JCheckBox r3 = new JCheckBox("Çilek");
+			    JCheckBox r4 = new JCheckBox("Üzüm");
+
+    JButton b=new JButton("Enter");
+
+			    add(etk);
+
+			    add(r1);
+			    add(r2);
+			    add(r3);
+			    add(r4);
+
+			    add(b);
+			  }
+	public static void main(String[] args) {
+	    JFrame frame = new CheckBox1();
+	    frame.setLayout(new GridLayout(6,1));
+	    frame.setTitle("Check Boxlar");
+	    frame.setSize(400, 400);
+	    frame.setLocationRelativeTo(null);
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	  }
+
+	}
+
+---------
+---------------------TextArea ve scrollPane
+	import javax.swing.*;
+	import java.awt.*;
+
+	public class AnlatımPaneli extends JPanel {
+
+	  private JLabel etkBaslik = new JLabel();  /** image icon ve text gösteren etiket*/
+
+	  private JTextArea txtAreaMetin = new JTextArea();
+
+	  public AnlatımPaneli() {
+	    // ikon ve texti merkeze al ve texti ikonun altına al.
+	    etkBaslik.setHorizontalAlignment(JLabel.CENTER);
+	    etkBaslik.setHorizontalTextPosition(JLabel.CENTER);
+	    etkBaslik.setVerticalTextPosition(JLabel.BOTTOM);
+
+	    // Etiket ve text alanının fontlarını değiştir
+	    etkBaslik.setFont(new Font("SansSerif", Font.BOLD, 16));
+
+	    txtAreaMetin.setFont(new Font("Serif", Font.PLAIN, 14));
+
+	    // Metin satırlar halinde ve kelimelerden ayrılıyor
+	    txtAreaMetin.setLineWrap(true);
+	    txtAreaMetin.setWrapStyleWord(true);
+	    txtAreaMetin.setEditable(false);
+
+	    // Metni tutan bir kaydırma çubuğu
+	    JScrollPane scrollPane = new JScrollPane(txtAreaMetin);
+
+	    // panel BorderLayout olsun. scrollpane ve etiket eklensin
+	    setLayout(new BorderLayout(5, 5));
+	    add(scrollPane, BorderLayout.CENTER);
+	    add(etkBaslik, BorderLayout.WEST);
+	  }
+
+	  public void setTitle(String title) {
+	    etkBaslik.setText(title);
+	  }
+
+	  public void setImageIcon(ImageIcon icon) {
+	    etkBaslik.setIcon(icon);
+	  }
+
+	  public void setDescription(String text) {
+	    txtAreaMetin.setText(text);
+	  }
+	}
+
+------testTextAreaDemo---(yukarıdaki programın devamı)
+import java.awt.*;
+import javax.swing.*;
+
+public class TextAreaDemo extends JFrame {
+   private AnlatımPaneli p1 = new AnlatımPaneli();
+
+  public static void main(String[] args) {
+    TextAreaDemo pencere = new TextAreaDemo();
+    pencere.setSize(400,300);
+    pencere.setLocationRelativeTo(null); // Center the pencere
+    pencere.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    pencere.setTitle("TextArea örneği");
+    pencere.setVisible(true);
+  }
+
+  public TextAreaDemo() {
+    // Panele Başlık, metin ve resim eklemek
+    p1.setTitle("Title");
+    String metin = "7 kıta 7 renk \n\n" +
+      "Üniversitemiz uluslararası bir üniversite olduğundan, " +
+      "dünyanın çok değişik ülkelerinden çok fazla yabancı öğrencilerimiz " +
+      "var. Bu öğrencilerimizle de aynı bölümde olmazsanız bile tanışın, " +
+      "arkadaşlıklar kurun, ileride mezun olduktan sonra da " +
+      "bu arkadaşlarınızla ilişkilerinizi devam ettirin. " +
+      "Onların ülkelerine gidin, oralardan insanları ülkemize davet edin. " +
+      "Hayatınızda girebileceğiniz her kulvarda, bu tip " +
+      "arkadaşlıklardan hem siz, hem ülkemiz, hem de onların"+
+      " ülkeleri istifade edecektir.";
+    p1.setDescription(metin);
+    p1.setImageIcon(new ImageIcon("logo.gif"));
+
+    // paneli pencereye eklemek
+    setLayout(new BorderLayout());
+    add(p1, BorderLayout.CENTER);
+  }
+}

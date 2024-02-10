@@ -1,0 +1,419 @@
+Olay Yönlendirmeli Programlama (Event Driven Programming)
+Olaylar, olay kaynakları ve olay sınıflarını tanımlamak
+Dinleyici sınıfları tanımlamak, kaynak nesne ile birlikte dinleyici nesnelerine kaydolmak ve bir olayın başlattığı işlem için kod yazmak
+İç sınıflar kullanarak dinleyici sınıfları tanımlamak
+MouseEvents (fare hareketi) kullanarak program yazmak (§ 16.8)
+KeyEvents(klavye olayı) kullanarak program yazmak (§ 16.10)
+WindowEvent(Pencere olayları)
+
+Örnek 1: Consol’a yazdıran event. Tuşa tıklandığında yazıyor.
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Event1_B extends JFrame{
+	private JButton ent=new JButton("OK");
+
+	public Event1_B(){
+	  add(ent);
+	  Dinle a=new Dinle();
+	  ent.addActionListener(a);
+
+}
+	public class Dinle implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			System.out.println("OK butonuna basıldı..");
+
+		}
+	}
+	public static void main(String[] args) {
+		Event1_B pencere=new Event1_B();
+		pencere.setSize(300,300);
+		pencere.setLocation(200,100);
+		pencere.setVisible(true);
+		pencere.setTitle("Pencerem");
+		pencere.setLayout(new FlowLayout());
+		pencere.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+}
+Örnek 2: Butona tıklanınca butonun rengini değiştiren program (Aynı zamanda setSize ile boyutlarını da değiştirir)
+import java.awt.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.*;
+import java.awt.event.*;
+public class IlkClass extends JFrame{
+	private JButton dugme=new JButton("Kare");
+
+	public IlkClass(){
+		JPanel panel=new JPanel();
+		panel.setBorder(new TitledBorder("Ben bir panelim"));
+		panel.setLayout(new FlowLayout());
+		panel.add(dugme);
+		add(panel);
+		dugme.addActionListener(new Dinle());
+	}
+	public class Dinle implements ActionListener{
+
+		public void actionPerformed(ActionEvent e) {
+		    dugme.setBackground(Color.PINK);
+		    dugme.setForeground(Color.BLUE);
+    dugme.setSize(150, 50);
+		}
+	}
+	public static void main(String[] args) {
+		IlkClass pencere=new IlkClass();
+		pencere.setTitle("Ben bir frame'im");
+		pencere.setLocationRelativeTo(null);
+		pencere.setSize(400,200);
+		pencere.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pencere.setVisible(true);
+	}
+}
+
+
+Örnek 2 deki önemli satırlar
+import java.awt.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.*;
+import java.awt.event.*;
+public class IlkClass extends JFrame{
+	private JButton dugme=new JButton("Kare");
+
+	public IlkClass(){
+		JPanel panel=new JPanel();
+		panel.setBorder(new TitledBorder("Ben bir panelim"));
+		panel.setLayout(new FlowLayout());
+		panel.add(dugme);
+		add(panel);
+		dugme.addActionListener(new Dinle);
+	}
+	public class Dinle implements ActionListener{
+
+		public void actionPerformed(ActionEvent e) {
+		    dugme.setBackground(Color.PINK);
+		    dugme.setForeground(Color.BLUE);
+    dugme.setSize(150, 50);
+		}
+	}
+	public static void main(String[] args) {
+		IlkClass pencere=new IlkClass();
+		pencere.setTitle("Ben bir frame'im");
+		pencere.setLocationRelativeTo(null);
+		pencere.setSize(400,200);
+		pencere.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pencere.setVisible(true);
+	}}
+
+--------Örnek 3  İki tuştan hangisine tıklandığını yazıyor.
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class EventToConsol extends JFrame{
+	private JButton enter=new JButton("Enter");
+	private JButton cancel=new JButton("Cancel");
+	public EventToConsol(){
+	  add(enter);
+	  add(cancel);
+	  Dinle a=new Dinle();
+	  enter.addActionListener(a);
+	  cancel.addActionListener(a);
+}
+	public class Dinle implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			if(e.getSource()==enter)
+				System.out.println("Enter butonuna basıldı..");
+			else if(e.getSource()==cancel)
+				System.out.println("Cancel butonuna basıldı..");
+		}
+	}
+	public static void main(String[] args) {
+		EventToConsol pencere=new EventToConsol();
+		pencere.setSize(300,300);
+		pencere.setLocation(200,100);
+		pencere.setVisible(true);
+		pencere.setTitle("Pencerem");
+		pencere.setLayout(new FlowLayout());
+		pencere.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+}
+
+-----------Örnek 4: İki sayı okuyup Enter tuşuna basılınca işlem sonucunu yazan program(radio butonlarından seçilen işleme göre)
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.event.*;
+public class Islem extends JFrame{
+	private JTextField sayi1=new JTextField (10);
+	private JTextField  sayi2=new JTextField (10);
+	private JRadioButton r1=new JRadioButton("+");
+	private JRadioButton r2=new JRadioButton("-");
+	private JRadioButton r3=new JRadioButton("*");
+	private JRadioButton r4=new JRadioButton("/");
+	private JTextField sonuc=new JTextField(10);
+	JButton enter=new JButton("ENTER");
+public Islem(){
+
+	JPanel pN=new JPanel();
+	pN.setLayout(new FlowLayout());
+
+	JLabel etk1=new JLabel("Sayi 1 ");
+	JLabel etk2=new JLabel("Sayi 2 ");
+	pN.add(etk1);
+	pN.add(sayi1);
+	pN.add(etk2);
+	pN.add(sayi2);
+	add(pN,BorderLayout.NORTH);
+
+	JPanel pC=new JPanel(new FlowLayout());
+	pC.setBorder(new TitledBorder("Islemler"));
+
+	ButtonGroup btg=new ButtonGroup();
+	btg.add(r1);
+	btg.add(r2);
+	btg.add(r3);
+	btg.add(r4);
+	pC.add(r1);
+	pC.add(r2);
+	pC.add(r3);
+	pC.add(r4);
+
+	pC.add(enter);
+	enter.addActionListener(new Dinle ());
+	add(pC,BorderLayout.CENTER);
+	JPanel pS=new JPanel();
+
+	JLabel etk3=new JLabel("Sonuc");
+	pS.add(etk3);
+	pS.add(sonuc);
+	add(pS,BorderLayout.SOUTH);
+}
+
+public class Dinle implements ActionListener{
+	public void actionPerformed(ActionEvent e){
+		String s1=sayi1.getText();
+		String s2=sayi2.getText();
+		int a=Integer.parseInt(s1);
+		int b=Integer.parseInt(s2);
+
+		if(e.getSource()==enter){
+			if(r1.isSelected())
+			    sonuc.setText(""+(a+b));
+		    else
+			  if(r2.isSelected())
+				sonuc.setText(""+(a-b));
+			  else
+				if(r3.isSelected())
+					sonuc.setText(""+(a*b));
+				else
+					if(b!=0)
+						sonuc.setText(""+(a/b));
+					else
+						sonuc.setText("Sıfıra bölme hatası");
+		}
+	}
+}
+	public static void main(String[] args) {
+		Islem pencere=new Islem();
+		pencere.setLocationRelativeTo(null);
+		pencere.setVisible(true);
+		pencere.setTitle("Hesap işlemi");
+		pencere.setSize(400,200);
+		pencere.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+}
+
+
+----------Örnek 5 Butona tıklanınca butonun rengini değiştiren program (Aynı zamanda setSize ile boyutlarını da değiştirir) Her tıklandığında diğer duruma geçiyor.
+import java.awt.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.*;
+import java.awt.event.*;
+public class EventTekrar extends JFrame{
+	private JButton dugme=new JButton("Kare");
+	private int say;
+	public EventTekrar(){
+		say=1;
+		JPanel panel=new JPanel();
+		panel.setBorder(new TitledBorder("Ben bir panelim"));
+		panel.setLayout(new FlowLayout());
+		dugme.setBackground(Color.WHITE);
+		dugme.setForeground(Color.BLACK);
+		panel.add(dugme);
+		add(panel);
+		dugme.addActionListener(new Dinle());
+	}
+	public class Dinle implements ActionListener{
+
+		public void actionPerformed(ActionEvent e) {
+			if(dugme==e.getSource())
+				if(say==1)
+					say=2;
+				else
+					say=1;
+			if(say==1){
+				dugme.setBackground(Color.PINK);
+				dugme.setForeground(Color.BLUE);
+				dugme.setSize(150, 50);
+			}
+			else{
+				dugme.setBackground(Color.WHITE);
+				dugme.setForeground(Color.BLACK);
+				dugme.setSize(70, 30);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		EventTekrar pencere=new EventTekrar();
+		pencere.setTitle("Ben bir pencereyim");
+		pencere.setLocationRelativeTo(null);
+		pencere.setSize(400,200);
+		pencere.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pencere.setVisible(true);
+	}}
+
+
+-----------Örnek 6:  İki sayıyı textField’lardan okuyup dört işlemden hangi tuşa basıldıysa o işlemi yapan program.
+import javax.swing.border.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class Islem2Buton extends JFrame{
+	private JTextField sayi1=new JTextField (10);
+	private JTextField sayi2=new JTextField (10);
+	private JTextField sonuc=new JTextField(10);
+	private JButton toplam=new JButton("+");
+	private JButton cikar=new JButton("-");
+	private JButton carpim=new JButton("*");
+	private JButton bolme=new JButton("/");
+	public Islem2Buton(){
+		sonuc.setEditable(false);
+		JPanel p1=new JPanel(new FlowLayout());
+		p1.setBorder(new TitledBorder("Sayılar"));
+		p1.add(sayi1);
+		p1.add(sayi2);
+		JPanel p2=new JPanel(new FlowLayout());
+		p2.setBorder(new TitledBorder("İşlemler"));
+		p2.add(toplam);
+		p2.add(carpim);
+		p2.add(cikar);
+		p2.add(bolme);
+		JPanel p3=new JPanel(new FlowLayout());
+		p3.setBorder(new TitledBorder("Sonuç"));
+		p3.add(sonuc);
+		add(p1);
+		add(p2);
+		add(p3);
+		Dinle d=new Dinle();
+		toplam.addActionListener(d);
+		cikar.addActionListener(d);
+		carpim.addActionListener(d);
+		bolme.addActionListener(d);
+	}
+	public class Dinle implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			int s1=0;
+			s1=Integer.parseInt(sayi1.getText());
+			int s2=0;
+			s2=Integer.parseInt(sayi2.getText());
+
+if(sayi2.getText()!=null && sayi2.getText()!=null)
+
+			         if(e.getSource()==toplam){sonuc.setText(s1+"+"+s2+"="+(s1+s2));}
+			               else if(e.getSource()==cikar){
+sonuc.setText(s1+"-"+s2+"="+(s1-s2));
+}
+			               else if(e.getSource()==carpim){
+sonuc.setText(s1+"*"+s2+"="+(s1*s2));
+}
+			               else if(e.getSource()==bolme){
+				             if(s2==0)
+					     sonuc.setText("Sıfıra bolme hatası");
+				             else
+					     sonuc.setText(s1+"/"+s2+"="+(s1/s2));
+			      }
+		}
+	}
+	public static void main(String[] args) {
+		Islem2Buton pencere=new Islem2Buton();
+		pencere.setLayout(new GridLayout(3,1));
+		pencere.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		pencere.setVisible(true);
+		pencere.setLocationRelativeTo(null);
+		pencere.setSize(300,300);
+	}
+
+}
+
+
+
+-------Örnek 7  ComboBox event. Combo box’tan seçilen işlemi yapan program
+import javax.swing.border.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class ComboBoxEvent extends JFrame{
+	private JTextField sayi1=new JTextField (10);
+	private JTextField sayi2=new JTextField (10);
+	private JTextField sonuc=new JTextField(10);
+	private JComboBox box;
+
+	public ComboBoxEvent(){
+		sonuc.setEditable(false);
+		JPanel p1=new JPanel(new FlowLayout());
+		p1.setBorder(new TitledBorder("Sayılar"));
+		p1.add(sayi1);
+		p1.add(sayi2);
+		JPanel p2=new JPanel(new FlowLayout());
+		p2.setBorder(new TitledBorder("İşlemler"));
+		String[] x={"Topla","Cikar","Carp","Bol"};
+		box=new JComboBox(x);
+		p2.add(box);
+
+		JPanel p3=new JPanel(new FlowLayout());
+		p3.setBorder(new TitledBorder("Sonuç"));
+		p3.add(sonuc);
+		add(p1);
+		add(p2);
+		add(p3);
+
+		box.addActionListener(new Dinle());
+	}
+	public class Dinle implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			int s1=Integer.parseInt(sayi1.getText());
+			int s2=Integer.parseInt(sayi2.getText());
+			if(sayi2.getText()!=null && sayi2.getText()!=null)
+
+			  if(e.getSource()==box){
+				  if(box.getSelectedItem().equals("Topla"))
+					 sonuc.setText(s1+"+"+s2+"="+(s1+s2));
+			      else if(box.getSelectedItem().equals("Cikar"))
+				      sonuc.setText(s1+"-"+s2+"="+(s1-s2));
+			      else if(box.getSelectedItem().equals("Carp"))
+				      sonuc.setText(s1+"*"+s2+"="+(s1*s2));
+			      else if(box.getSelectedItem().equals("Bol"))
+				      if(s2==0)
+					     sonuc.setText("Sıfıra bolme");
+				      else
+					     sonuc.setText(s1+"/"+s2+"="+(s1/s2));
+			      }
+		}
+	}
+	public static void main(String[] args) {
+		ComboBoxEvent pencere=new ComboBoxEvent();
+		pencere.setLayout(new GridLayout(3,1));
+		pencere.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		pencere.setVisible(true);
+		pencere.setLocationRelativeTo(null);
+		pencere.setSize(300,300);
+	}
+
+}
+
+
