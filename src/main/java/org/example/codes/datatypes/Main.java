@@ -1,4 +1,4 @@
-package org.example.codes.datatypes;
+package org.example.codes.javademos.datatypes;
 
 public class Main {
 
