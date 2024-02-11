@@ -1,4 +1,4 @@
-package org.guide.Chapter3;
+package org.example.codes.g00_intro;
 import java.util.Scanner;
 //This program can calculate two roots
 public class Fifth {

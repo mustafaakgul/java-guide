@@ -1,4 +1,4 @@
-package org.guide.Chapter3;
+package org.example.codes.g00_intro;
 // if-else and switch case stataments
 public class Ninth {
 	/*public static void main(String[] args) {

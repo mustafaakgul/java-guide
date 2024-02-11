@@ -1,4 +1,4 @@
-package org.guide.Chapter4;
+package org.example.codes.g03_selections;
 
 import java.util.Scanner;
 

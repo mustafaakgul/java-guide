@@ -1,4 +1,4 @@
-package org.guide.Chapter4;
+package org.example.codes.g03_selections;
 
 public class First {
 	public static void main(String[] args) {

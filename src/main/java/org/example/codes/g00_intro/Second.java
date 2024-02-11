@@ -1,4 +1,4 @@
-package org.guide.Chapter3;
+package org.example.codes.g00_intro;
 //writing codes with boolean expressions
 public class Second {
 public static void main(String[] args) {

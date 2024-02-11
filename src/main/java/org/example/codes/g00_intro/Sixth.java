@@ -1,4 +1,4 @@
-package org.guide.Chapter3;
+package org.example.codes.g00_intro;
 
 public class Sixth {
 	public static void main(String[] args) {
