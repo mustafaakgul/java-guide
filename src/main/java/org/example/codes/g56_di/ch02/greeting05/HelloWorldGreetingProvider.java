@@ -1,0 +1,8 @@
+package org.javaturk.spring.di.ch02.greeting05;
+
+public class HelloWorldGreetingProvider implements GreetingProvider{
+	
+	public String getGreeting() {
+		return "Hello World :)";
+	}
+}

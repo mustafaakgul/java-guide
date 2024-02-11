@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="beanA" name="bean_A, bean_a; BEAN_A BEANAAA"
+		class="org.javaturk.spring.di.ch03.domain.BeanA">
+		<property name="beanB" ref="beanB" />
+	</bean>
+
+	<import resource="beans.xml"/>
+	<import resource="anotherBeans.xml"/>
+	<import resource="yetAnotherBeans.xml"/>
+</beans>

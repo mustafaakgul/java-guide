@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="beanA1" name="xxx yyy" class="org.javaturk.spring.di.ch03.domain.BeanA">
+		<property name="beanB" ref="beanB1" />
+	</bean>
+
+	<bean id="beanB1" class="org.javaturk.spring.di.ch03.domain.BeanB">
+		<property name="beanC" ref="beanC1" />
+	</bean>
+
+	<bean id="beanC1" class="org.javaturk.spring.di.ch03.domain.BeanC" />
+
+	<bean id="beanA3" class="org.javaturk.spring.di.ch03.domain.BeanA">
+		<property name="beanB" ref="beanB1" />
+	</bean>
+
+	<bean class="org.javaturk.spring.di.ch03.domain.BeanA" />
+
+	<alias name="beanA1" alias="a" />
+	<alias name="beanA1" alias="aa" />
+
+	<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="beanA1"
+			class="org.javaturk.spring.di.ch03.domain.BeanA">
+			<property name="beanB" ref="beanB1" />
+		</bean>
+
+		<bean id="beanB1"
+			class="org.javaturk.spring.di.ch03.domain.BeanB" >
+			<property name="beanC" ref="beanC1" />
+		</bean>
+	</beans>
+
+	<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean name="xxx yyy"
+			class="org.javaturk.spring.di.ch03.domain.BeanB" />
+	</beans>
+	
+</beans>

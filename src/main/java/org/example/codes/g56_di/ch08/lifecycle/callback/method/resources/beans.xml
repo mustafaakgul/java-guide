@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd"
+ default-init-method="defaultStartUp"
+	default-destroy-method="defaultCleanUp" >
+	<!-- default-lazy-init="true" default-init-method="defaultStartUp" -->
+	<!-- default-destroy-method="defaultCleanUp"> -->
+
+	<!-- <context:annotation-config /> -->
+<!-- 	<context:component-scan base-package="org.javaturk.spring.di.ch08.lifecycle.method.domain"/> -->
+
+	<bean id="beanA"
+		class="org.javaturk.spring.di.ch08.lifecycle.callback.method.domain1.BeanA">
+		<property name="beanB" ref="beanB" />
+	</bean>
+
+	<bean id="beanB"
+		class="org.javaturk.spring.di.ch08.lifecycle.callback.method.domain1.BeanB"
+		init-method="startUp" destroy-method="cleanUp">
+		<property name="beanC" ref="beanC" />
+	</bean>
+
+	<bean id="beanC"
+		class="org.javaturk.spring.di.ch08.lifecycle.callback.method.domain1.BeanC"
+		init-method="startUp" destroy-method="cleanUp">
+	</bean>
+
+	<bean id="beanD"
+		class="org.javaturk.spring.di.ch08.lifecycle.callback.method.domain1.BeanD" destroy-method="close"/>
+	
+	<bean id="beanE"
+		class="org.javaturk.spring.di.ch08.lifecycle.callback.method.domain1.BeanE" scope="prototype"/>
+	
+	<bean 
+		class="org.javaturk.spring.di.ch08.lifecycle.callback.method.domain1.PrototypeDestroyer">
+	</bean>
+
+</beans>

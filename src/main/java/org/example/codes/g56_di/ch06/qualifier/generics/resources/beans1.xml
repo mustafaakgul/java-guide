@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- enable the usage of annotations -->
+<!-- 	<context:annotation-config -->
+<!-- 		base-package="org.javaturk.spring.di.ch06.qualifier.generics" /> -->
+
+	<bean id="person"
+		class="org.javaturk.spring.di.ch06.qualifier.generics.Person">
+		<property name="homeAddress" ref="homeDp" />
+		<property name="officeAddress" ref="officeDp" />
+	</bean>
+
+	<bean id="homeDp"
+		class="org.javaturk.spring.di.ch06.qualifier.generics.DeliveryPoint">
+		<property name="address" ref="homeAddress" />
+	</bean>
+
+	<bean id="officeDp"
+		class="org.javaturk.spring.di.ch06.qualifier.generics.DeliveryPoint">
+		<property name="address" ref="officeAddress" />
+	</bean>
+
+	<bean id="homeAddress"
+		class="org.javaturk.spring.di.ch06.qualifier.custom.AyvalikAddress" />
+
+	<bean id="officeAddress"
+		class="org.javaturk.spring.di.ch06.qualifier.custom.OfficeAddress" />
+
+</beans>

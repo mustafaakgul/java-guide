@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans	
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" > <!-- default-lazy-init="true" -->
+
+<!-- scope="prototype" -->
+	<bean id="renderer1" scope="prototype"
+		class="org.javaturk.spring.di.ch05.greeting.greeting08.StandardOutputRenderer">
+		<property name="greetingProvider" ref="provider" />
+	</bean>
+
+	<bean id="provider" 
+		class="org.javaturk.spring.di.ch05.greeting.greeting08.HelloWorldGreetingProvider" />
+
+<!--  lazy-init="false"  -->
+	<bean id="renderer2"     
+		class="org.javaturk.spring.di.ch05.greeting.greeting08.StandardOutputRenderer">
+		<property name="greetingProvider">
+			<ref bean="provider" />
+		</property>
+	</bean>
+</beans>

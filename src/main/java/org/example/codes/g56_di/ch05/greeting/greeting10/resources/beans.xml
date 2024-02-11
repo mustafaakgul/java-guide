@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans	
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="renderer1" autowire="constructor"
+		class="org.javaturk.spring.di.ch05.greeting.greeting10.ErrorOutputRenderer">
+		<!-- No need for this -->
+		<!-- <constructor-arg name="greetingProvider" -->
+		<!-- ref="greetingProvider" /> -->
+	</bean>
+
+
+	<bean id="renderer2" autowire="byName"
+		class="org.javaturk.spring.di.ch05.greeting.greeting10.StandardOutputRenderer">
+	</bean>
+
+	<bean id="renderer3" autowire="byType"
+		class="org.javaturk.spring.di.ch05.greeting.greeting10.StandardOutputRenderer">
+	</bean>
+
+	<bean id="greetingProvider" 
+		class="org.javaturk.spring.di.ch05.greeting.greeting10.HelloWorldGreetingProvider" />
+</beans>
